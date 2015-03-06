@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*
+
+Khurram Shahzad
+http://www.bizonesolutins.com/
+Mar, 2015.
+
+*/
+
+
+
+.clear{ clear:both}
+#mainbody{ width:100%;}
+#row_1{ height:73px; background:#2B1A1B;}
+#row_2{ height:665px; background:#42D8F7;}
+#row_3{ height:185px; background:#FDFDFD;}
+#row_4{ height:800px; background:#EDEDED;}
+#row_5{ height:666px; background:#F7F7F7;}
+#row_6{ height:2911px; background:#F1F1F1;}
+#row_7{ height:391px; background:#635A5A;}
+
+#logo{ width:200px; float:left;}
+#logo img{ height:50px;}
+#support { color:#fff; float:right;  width:150px; margin-top:30px;}
+
+#menus{width:400px; color:#fff;float:left;}
+#menus ul {text-align: left; display: inline; margin: 0; padding: 15px 4px 17px 0; list-style: none;}
+ul li a{ text-decoration:none; color:#fff;}
+ul li {font: bold 12px/18px sans-serif; display: inline-block; margin-right: -4px;  position: relative;  padding: 15px 20px;  cursor: pointer;  -webkit-transition: all 0.2s;  -moz-transition: all 0.2s;  -ms-transition: all 0.2s;  -o-transition: all 0.2s;  transition: all 0.2s;}
+ul li:hover { background: #555;  color: #fff;}
+ul li ul { padding: 0;  position: absolute;  top: 48px;  left: 0;  width: 150px;  -webkit-box-shadow: none;  -moz-box-shadow: none; box-shadow: none;  display: none;  opacity: 0;  visibility: hidden;  -webkit-transiton: opacity 0.2s;  -moz-transition: opacity 0.2s;  -ms-transition: opacity 0.2s;  -o-transition: opacity 0.2s;  -transition: opacity 0.2s;}
+ul li ul li { background: #555;  display: block;  color: #fff; text-shadow: 0 -1px 0 #000;}
+ul li ul li:hover { background: #666; }
+ul li:hover ul {display: block; opacity: 1; visibility: visible;}
+
+
+
+
+
+#todo .minion{ left:20px; position:absolute; float:left;}
+#todo .building{ left:55px; position:absolute;}
+#todo .dollor{ left:90px; position:absolute;}
+#todo .trouble{ left:125px; position:absolute;}
+.minion-red{ background:url(../images/minion-red.png)}
+.building-red{ background:url(../images/building-red.png)}
+.dollor{ background:url(../images/dollor.png)}
+.trouble{ background:url(../images/trouble.png)}
+
+#board{width: 100%;min-height:100px;position:relative;float:left;}
+#todo{width: 25%;float:left;}
+#fullboard{background:url(../images/bg_game.jpg) no-repeat left top;width:75%; min-height:1045px;position:relative; float:left;}
+.title{background-color:#52460a;text-align:center;color:white;padding: 2px 0px;}
+
+#todo{width: 300px;min-height:150px;border: 2px solid black;}
+.board_area{ position:absolute; border:0px solid #F8F8F8;}
+#area_1{height: 93px; width:200px; top: 110px;left: 390px;}
+#area_2{height: 91px; width: 150px; top: 232px; left: 328px;}
+#area_3{height: 127px; width:180px; top: 271px;left: 509px;}	
+#area_4{height: 127px;width: 150px;top: 409px;left: 536px;}	
+#area_5{height: 99px;width: 150px;top: 507px;left: 384px;}	
+#area_6{height: 194px;width: 100px;top: 572px;left: 542px;}	
+#area_7{height: 221px;width: 100px;top: 607px;left: 365px;}	
+#area_8{height: 221px;width: 150px;top: 590px;left: 165px;}
+#area_9{height: 169px;width: 135px;top: 444px;left: 30px;}	
+#area_10{height: 100px;width: 100px;top: 407px;left: 316px;}	
+#area_11{height: 136px;width: 108px;top: 307px;left: 166px;}	
+#area_12{height: 100px;width: 194px;top: 157px;left: 116px;}	
+
+*[draggable=true]{float:left;;margin:10px 0px;font-weight:bold;width:30px;height:30px;}
+.cardTitle{background-color: rgb(255,255,255);border:2px solid white;}

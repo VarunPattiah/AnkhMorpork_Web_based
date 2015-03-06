@@ -1,0 +1,85 @@
+@import url("http://fonts.googleapis.com/css?family=Oswald:400,300")
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Oswald';
+	background-color: #3D3B3C; 
+}
+
+a {
+	text-decoration: none;
+}
+
+div#header {
+	width: 100%	;
+	heigth: 250px;
+	background-color: #3D3B3C;
+	margin: 0 auto;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+div#container {
+	width: 100%	;
+	margin: 0 auto;
+}
+.sidebar{
+	width: 250px;
+	height: 100%;
+	background-color: #161716;
+	float: left;
+}
+
+ul#uno {
+	
+}
+ul#uno li {
+		list-style: none;
+}
+
+ul#uno li a {
+	color: #ccc;
+	display: block;
+	padding: 10px;	
+	font-size: 1.0em;
+	border-bottom: 1px solid #0A0A0A;
+	}
+	
+ul#uno li a:HOVER{
+	background-color: #030303;
+	color:#fff;
+	padding:20px;
+}	
+	
+.content {
+	width: auto;
+	height: calc(100% - 50px);
+	
+}
+.element
+{
+	text-shadow: 0px 0px 7px rgba(88, 38, 38, 0.75);
+	color: #F2F1EF;
+	font-size: 32px;
+}
+img { 
+    display: inline-block;
+}
+h1
+{
+	text-shadow: 0px 0px 7px rgba(88, 38, 38, 0.75);
+	color: #FCECFB;
+	font-size: 32px;
+} 
+select {
+  font-family: Cursive;
+   width:120px;  
+  color: #0A0A0A;
+  font-weight: bold;
+  background-color: #555C52 ;
+}    

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Ankh Morpork</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">            
+</head>
+	
+	<body>
+    <div id="board">
+        <div id="todo">
+        	<div class="title">Khurram Objects</div>
+            <div id="minion-1" class="minion minion-red" draggable="true"></div>
+            <div id="minion-2" class="minion minion-red" draggable="true"></div>
+            <div id="minion-3" class="minion minion-red" draggable="true"></div>
+            
+             <div id="building-1" class="building building-red" draggable="true"></div>
+            <div id="building-2" class="building building-red" draggable="true"></div>
+            <div id="building-3" class="building building-red" draggable="true"></div>   
+            
+             <div id="dollor-1" class="dollor" draggable="true"></div> 
+             <div id="trouble-1" class="trouble" draggable="true"></div> 
+        
+        </div>
+        
+      
+        
+        
+        <div id="fullboard">        
+                <div id="area_1" class="board_area"></div>			
+                <div id="area_2" class="board_area"></div>        
+                <div id="area_3" class="board_area"></div> 
+                <div id="area_4" class="board_area"></div>			
+                <div id="area_5" class="board_area"></div>        
+                <div id="area_6" class="board_area"></div> 
+                <div id="area_7" class="board_area"></div>			
+                <div id="area_8" class="board_area"></div>        
+                <div id="area_9" class="board_area"></div> 
+                <div id="area_10" class="board_area"></div>			
+                <div id="area_11" class="board_area"></div>        
+                <div id="area_12" class="board_area"></div>              
+        </div>
+        
+		
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js">
+        </script>
+
+		<script type="text/javascript">
+		$('document').ready(init);
+		
+        function init(){
+            $('.minion, .building, .dollor, .trouble').bind('dragstart', function(event) {
+                event.originalEvent.dataTransfer.setData("text/plain", event.target.getAttribute('id'));
+            });
+            
+  		    // bind the dragover event on the board sections
+            $('#todo, .board_area, .dollor, .trouble').bind('dragover', function(event) {
+                event.preventDefault();
+            });
+			
+			// bind the drop event on the board sections
+  			$('#todo, .board_area, .dollor, .trouble').bind('drop', function(event) {
+            var notecard = event.originalEvent.dataTransfer.getData("text/plain");
+			event.target.appendChild(document.getElementById(notecard));
+			//alert(notecard);
+            //alert($(this).attr("id"));
+			
+			// Turn off the default behaviour
+			// without this, FF will try and go to a URL with your id's name
+            event.preventDefault();
+			});
+        }
+		</script>
+	</body>
+</html>
