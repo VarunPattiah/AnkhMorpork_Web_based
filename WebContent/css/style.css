@@ -40,21 +40,22 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 
 
-#todo .minion{ left:20px; position:absolute; float:left;}
-#todo .building{ left:55px; position:absolute;}
-#todo .dollor{ left:90px; position:absolute;}
-#todo .trouble{ left:125px; position:absolute;}
+.player .minion{ left:20px; position:absolute; float:left;}
+.player .building{ left:55px; position:absolute;}
+.player .dollor{ left:90px; position:absolute;}
+.player .trouble{ left:125px; position:absolute;}
 .minion-red{ background:url(../images/minion-red.png)}
 .building-red{ background:url(../images/building-red.png)}
 .dollor{ background:url(../images/dollor.png)}
 .trouble{ background:url(../images/trouble.png)}
 
 #board{width: 100%;min-height:100px;position:relative;float:left;}
-#todo{width: 25%;float:left;}
+#players{width: 25%;float:left;}
+.player{ width:100%;}
 #fullboard{background:url(../images/bg_game.jpg) no-repeat left top;width:75%; min-height:1045px;position:relative; float:left;}
 .title{background-color:#52460a;text-align:center;color:white;padding: 2px 0px;}
 
-#todo{width: 300px;min-height:150px;border: 2px solid black;}
+.player{width: 300px;min-height:150px;border: 2px solid black;}
 .board_area{ position:absolute; border:0px solid #F8F8F8;}
 #area_1{height: 93px; width:200px; top: 110px;left: 390px;}
 #area_2{height: 91px; width: 150px; top: 232px; left: 328px;}

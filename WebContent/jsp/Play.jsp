@@ -9,11 +9,17 @@
 </head>
 <body>
 	<body>
+    
+     <div id="board">
+     
 	<% Integer noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer")); %>
 	noOfPlayer = <%=noOfPlayer %>
+    
+    <div id="players">
 	 <% for(int i = 0; i < noOfPlayer; i+=1) { %>
-	    <div id="board">
-        <div id="todo">
+	   
+       
+        <div class="player">
         	<div class="title"> Objects</div>
             <div id="minion-1" class="minion minion-red" draggable="true"></div>
             <div id="minion-2" class="minion minion-red" draggable="true"></div>
@@ -28,6 +34,7 @@
         
         </div>
         <% } %>
+        </div>
       
         
         
@@ -59,12 +66,12 @@
             });
             
   		    // bind the dragover event on the board sections
-            $('#todo, .board_area, .dollor, .trouble').bind('dragover', function(event) {
+            $('.player, .board_area, .dollor, .trouble').bind('dragover', function(event) {
                 event.preventDefault();
             });
 			
 			// bind the drop event on the board sections
-  			$('#todo, .board_area, .dollor, .trouble').bind('drop', function(event) {
+  			$('.player, .board_area, .dollor, .trouble').bind('drop', function(event) {
             var notecard = event.originalEvent.dataTransfer.getData("text/plain");
 			event.target.appendChild(document.getElementById(notecard));
 			//alert(notecard);
