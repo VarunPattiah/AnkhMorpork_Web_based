@@ -5,32 +5,72 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="../css/style.css" rel="stylesheet" type="text/css">  
-<title>Insert title here</title>
+<title>Ankh Morpork</title>
 </head>
 <body>
 	<body>
     
      <div id="board">
      
-	<% Integer noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer")); %>
+     
+     
+	<% 
+	Integer noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer")); 
+	//String[] colors = {'red','blue','green','yellow'};
+	String[] colors = { "red", "blue", "green", "yellow" };
+	
+	%>
 	noOfPlayer = <%=noOfPlayer %>
     
     <div id="players">
-	 <% for(int i = 0; i < noOfPlayer; i+=1) { %>
+    
+    <div class="common">
+     <div class="title"> Game Assets</div>
+     
+      <div id="dollor-1" class="drag dollor" draggable="true"></div> 
+      <div id="trouble-1" class="drag trouble" draggable="true"></div> 
+      
+      <div id="troll-1" class="drag troll" draggable="true"></div> 
+      <div id="demon-1" class="drag demon" draggable="true"></div>
+      
+      <div id="personality_card_1" class="drag personality_card" draggable="true"></div> 
+      <div id="personality_card_2" class="drag personality_card" draggable="true"></div> 
+      <div id="personality_card_3" class="drag personality_card" draggable="true"></div> 
+      <div id="personality_card_4" class="drag personality_card" draggable="true"></div> 
+      <div id="personality_card_5" class="drag personality_card" draggable="true"></div> 
+      <div id="personality_card_6" class="drag personality_card" draggable="true"></div> 
+      <div id="personality_card_7" class="drag personality_card" draggable="true"></div> 
+     
+      <div id="event_card_b1" class="drag event_card" draggable="true"></div>
+      <div id="event_card_g1" class="drag event_card" draggable="true"></div>
+      <div id="event_card_g2" class="drag event_card" draggable="true"></div>
+      <div id="event_card_g3" class="drag event_card" draggable="true"></div>
+      <div id="event_card_g4" class="drag event_card" draggable="true"></div>
+      <div id="event_card_g5" class="drag event_card" draggable="true"></div>
+      <div id="event_card_g6" class="drag event_card" draggable="true"></div>
+      <div id="event_card_g7" class="drag event_card" draggable="true"></div> 
+     
+     
+     
+            
+     </div>
+     <div class="clear"></div>
+     
+     
+	 <% for(int i = 0; i < noOfPlayer; i++) { %>
 	   
        
         <div class="player">
         	<div class="title"> Objects</div>
-            <div id="minion-1" class="minion minion-red" draggable="true"></div>
-            <div id="minion-2" class="minion minion-red" draggable="true"></div>
-            <div id="minion-3" class="minion minion-red" draggable="true"></div>
+            <div id="minion-1" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
+            <div id="minion-2" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
+            <div id="minion-3" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
             
-             <div id="building-1" class="building building-red" draggable="true"></div>
-            <div id="building-2" class="building building-red" draggable="true"></div>
-            <div id="building-3" class="building building-red" draggable="true"></div>   
+             <div id="building-1" class="drag building building-<%=colors[i]%>" draggable="true"></div>
+            <div id="building-2" class="drag building building-<%=colors[i]%>" draggable="true"></div>
+            <div id="building-3" class="drag building building-<%=colors[i]%>>" draggable="true"></div>   
             
-             <div id="dollor-1" class="dollor" draggable="true"></div> 
-             <div id="trouble-1" class="trouble" draggable="true"></div> 
+            
         
         </div>
         <% } %>
@@ -61,17 +101,17 @@
 		$('document').ready(init);
 		
         function init(){
-            $('.minion, .building, .dollor, .trouble').bind('dragstart', function(event) {
+            $('.drag').bind('dragstart', function(event) {
                 event.originalEvent.dataTransfer.setData("text/plain", event.target.getAttribute('id'));
             });
             
   		    // bind the dragover event on the board sections
-            $('.player, .board_area, .dollor, .trouble').bind('dragover', function(event) {
+            $('.player, .board_area').bind('dragover', function(event) {
                 event.preventDefault();
             });
 			
 			// bind the drop event on the board sections
-  			$('.player, .board_area, .dollor, .trouble').bind('drop', function(event) {
+  			$('.player, .board_area').bind('drop', function(event) {
             var notecard = event.originalEvent.dataTransfer.getData("text/plain");
 			event.target.appendChild(document.getElementById(notecard));
 			//alert(notecard);
