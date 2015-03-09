@@ -19,7 +19,7 @@ import com.fasterxml.jackson.core.sym.Name;
 public class Global {
 	
 	public enum Color {
-		RED(0), GREEN(1), BLUE(2), YELLLOW(3);
+		RED(1), GREEN(2), BLUE(3), YELLLOW(4);
 		
 		private int text;
 		private Color(int text)

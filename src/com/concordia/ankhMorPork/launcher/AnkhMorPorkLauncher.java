@@ -73,7 +73,7 @@ public class AnkhMorPorkLauncher {
 				playerName.add(nameOfPlayer);
 				System.out.println("Hi " + nameOfPlayer + "! \n");
 
-				colorOfPlayer = Global.Color.get(i);
+				colorOfPlayer = Global.Color.get(i+1);
 				System.out.println("Your Color is: " + colorOfPlayer);
 				colorList.add(colorOfPlayer);
 			}

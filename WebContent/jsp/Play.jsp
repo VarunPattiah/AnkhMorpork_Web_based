@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="com.concordia.ankhMorPork.manager.BoardManager" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,17 +10,16 @@
 </head>
 <body>
 	<body>
-    
+    <jsp:useBean id="ankhMorPorkController" class="com.concordia.ankhMorPork.launcher.AnkhMorPorkController" /> 
      <div id="board">
      
-     
-     
-	<% 
-	Integer noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer")); 
-	//String[] colors = {'red','blue','green','yellow'};
-	String[] colors = { "red", "blue", "green", "yellow" };
-	
-	%>
+	<% Integer noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer"));
+	   String playerNamelist=request.getParameter("Playername");	
+	   String[] playerlist=playerNamelist.split(",");
+	   BoardManager boardManager=ankhMorPorkController.initializeNewGame(noOfPlayer,playerNamelist);
+	   String[] colors = { "red", "blue", "green", "yellow" };
+	   System.out.println("Player trurn : "+boardManager.getBoard().getPlayerTurn());
+	%> 
 	noOfPlayer = <%=noOfPlayer %>
     
     <div id="players">
@@ -61,7 +61,7 @@
 	   
        
         <div class="player">
-        	<div class="title"> Objects</div>
+        	<div class="title"> <%=playerlist[i] %></div>
             <div id="minion-1" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
             <div id="minion-2" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
             <div id="minion-3" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
