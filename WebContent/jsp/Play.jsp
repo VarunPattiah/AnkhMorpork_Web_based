@@ -18,9 +18,8 @@
 	   String[] playerlist=playerNamelist.split(",");
 	   BoardManager boardManager=ankhMorPorkController.initializeNewGame(noOfPlayer,playerNamelist);
 	   String[] colors = { "red", "blue", "green", "yellow" };
-	   System.out.println("Player trurn : "+boardManager.getBoard().getPlayerTurn());
 	%> 
-	noOfPlayer = <%=noOfPlayer %>
+	<b>Player turn :</b> = <%=boardManager.getBoard().getPlayerTurn() %>
     
     <div id="players">
     
