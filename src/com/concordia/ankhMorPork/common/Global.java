@@ -19,7 +19,7 @@ import com.fasterxml.jackson.core.sym.Name;
 public class Global {
 	
 	public enum Color {
-		RED(1), GREEN(2), BLUE(3), YELLLOW(4);
+		RED(1), GREEN(2), BLUE(3), YELLOW(4);
 		
 		private int text;
 		private Color(int text)
@@ -40,6 +40,7 @@ public class Global {
 	final public static Integer BANK_MONEY = 120;
 	final public static Integer NO_OF_AREA=12;
 	public static String saveFileName;
+	public static String FILE_PATH;
 	public static Integer numberOfPlayers;
 	//public static Color colorList = new Color();
 	//public static ArrayList<String> colorList = new ArrayList<String>(Arrays.asList("Red", "Green", "Blue", "Yellow"));

@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -33,6 +34,46 @@ public class BoardManager {
 	public List<Player> playerList = new ArrayList<Player>();
 	public static String[] yourArray = null;
 	private Integer moneyDistributedCount=0;
+	public static HashMap<String, String> randomCardsDescription;
+	public static HashMap<Integer, HashMap<String, String>> randomEventCards;
+	//Static block to load Random EventCards
+		static {
+			
+			String path = new BoardManager().getClass().getClassLoader().getResource("").getPath();
+			String fullPath=null;
+			try {
+				fullPath = URLDecoder.decode(path, "UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			String tempPath[]= fullPath.split("/.metadata/.plugins/");
+			String pathArr= (String) tempPath[0].substring(1);
+			Global.FILE_PATH=pathArr+"/WebPage";
+			Scanner inFile1;
+			Integer i=1;
+			try {
+				inFile1 = new Scanner(new File(Global.FILE_PATH+"/resources/RandomEventCard.txt"));
+
+				while (inFile1.hasNext()) {
+					StringBuilder sb = new StringBuilder();
+					randomCardsDescription = new HashMap<String, String>();
+					randomEventCards = new HashMap<Integer, HashMap<String, String>>();
+					sb.append(inFile1.nextLine());
+					yourArray = sb.toString().split("|");
+					if (yourArray.length == 2) {
+						randomCardsDescription.put(yourArray[0],yourArray[1]);	
+						randomEventCards.put(i++,randomCardsDescription);
+					}
+				}
+
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		
 	
 	public BoardManager()
 	{
@@ -87,7 +128,7 @@ public class BoardManager {
 			Scanner inFile1;
 			Integer i=1;
 			try {
-				inFile1 = new Scanner(new File("./resources/PersonalityCard.txt"));
+				inFile1 = new Scanner(new File(Global.FILE_PATH+"/resources/PersonalityCard.txt"));
 
 				while (inFile1.hasNext()) {
 					put(i++,inFile1.nextLine());
@@ -98,34 +139,7 @@ public class BoardManager {
 		}
 		}
 	};
-	public static HashMap<String, String> randomCardsDescription;
-	public static HashMap<Integer, HashMap<String, String>> randomEventCards;
-	//Static block to load Random EventCards
-	static {
-		
-		Scanner inFile1;
-		Integer i=1;
-		try {
-			inFile1 = new Scanner(new File("./resources/RandomEventCard.txt"));
-
-			while (inFile1.hasNext()) {
-				StringBuilder sb = new StringBuilder();
-				randomCardsDescription = new HashMap<String, String>();
-				randomEventCards = new HashMap<Integer, HashMap<String, String>>();
-				sb.append(inFile1.nextLine());
-				yourArray = sb.toString().split("|");
-				if (yourArray.length == 2) {
-					randomCardsDescription.put(yourArray[0],yourArray[1]);	
-					randomEventCards.put(i++,randomCardsDescription);
-				}
-			}
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
+	
 	
 	/**
 	 * This method displays the current Status of the Game.
@@ -342,9 +356,8 @@ public class BoardManager {
 
 		String[] dataArray = null;
 		Scanner inFile1;
-		// System.out.println(new File(".").getAbsolutePath());
 		try {
-			inFile1 = new Scanner(new File("./resources/CityAreaInfo.txt"));
+			inFile1 = new Scanner(new File(Global.FILE_PATH+"/resources/CityAreaInfo.txt"));
 
 			while (inFile1.hasNext()) {
 				StringBuilder sb = new StringBuilder();
