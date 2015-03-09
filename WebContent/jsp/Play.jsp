@@ -62,13 +62,13 @@
        
         <div class="player">
         	<div class="title"> <%=playerlist[i] %></div>
-            <div id="minion-1" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
-            <div id="minion-2" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
-            <div id="minion-3" class="drag minion minion-<%=colors[i]%>" draggable="true"></div>
+            <div id="minion-1" class="drag minion minion-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
+            <div id="minion-2" class="drag minion minion-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
+            <div id="minion-3" class="drag minion minion-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
             
-             <div id="building-1" class="drag building building-<%=colors[i]%>" draggable="true"></div>
-            <div id="building-2" class="drag building building-<%=colors[i]%>" draggable="true"></div>
-            <div id="building-3" class="drag building building-<%=colors[i]%>>" draggable="true"></div>   
+             <div id="building-1" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
+            <div id="building-2" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
+            <div id="building-3" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>>" draggable="true"></div>   
             
             
         

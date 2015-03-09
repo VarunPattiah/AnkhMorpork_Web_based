@@ -2,7 +2,7 @@ var noOfPlayer=0;
 var playername="";
 function validate()
 {
-	alert("Inside Validate Function"+document.forms[0].noOfPlayer.value);
+	//alert("Inside Validate Function"+document.forms[0].noOfPlayer.value);
 	noOfPlayer=document.forms[0].noOfPlayer.value;
 	
 		$("#buttonId").hide();
