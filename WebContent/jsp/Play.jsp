@@ -1,3 +1,10 @@
+<%--
+ * @author Varun Pattiah
+ * Feb 25, 2015
+ * 2:16:36 PM
+ * 2015
+ * @email: varunpattiah@gmail.com
+ --%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ page import="com.concordia.ankhMorPork.manager.BoardManager" %>
@@ -34,22 +41,11 @@
       <div id="troll-1" class="drag troll" draggable="true"></div> 
       <div id="demon-1" class="drag demon" draggable="true"></div>
       
-      <div id="personality_card_1" class="drag personality_card" draggable="true"></div> 
-      <div id="personality_card_2" class="drag personality_card" draggable="true"></div> 
-      <div id="personality_card_3" class="drag personality_card" draggable="true"></div> 
-      <div id="personality_card_4" class="drag personality_card" draggable="true"></div> 
-      <div id="personality_card_5" class="drag personality_card" draggable="true"></div> 
-      <div id="personality_card_6" class="drag personality_card" draggable="true"></div> 
-      <div id="personality_card_7" class="drag personality_card" draggable="true"></div> 
-     
-      <div id="event_card_b1" class="drag event_card" draggable="true"></div>
-      <div id="event_card_g1" class="drag event_card" draggable="true"></div>
-      <div id="event_card_g2" class="drag event_card" draggable="true"></div>
-      <div id="event_card_g3" class="drag event_card" draggable="true"></div>
-      <div id="event_card_g4" class="drag event_card" draggable="true"></div>
-      <div id="event_card_g5" class="drag event_card" draggable="true"></div>
-      <div id="event_card_g6" class="drag event_card" draggable="true"></div>
-      <div id="event_card_g7" class="drag event_card" draggable="true"></div> 
+       <% for(int j = 0; j < boardManager.getBoard().getCityAreaCard().size(); j++) { System.out.println("CityAreaCard : "+boardManager.getBoard().getCityAreaCard().get(j));%>
+       			
+       <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j) %>" ></div>
+       
+        <% } %> 
      
      
      
@@ -71,7 +67,7 @@
             <div id="building-2" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
             <div id="building-3" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>>" draggable="true"></div>   
              <div id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>"  class="drag personality_card" draggable="true"></div> 
-            <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println(boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
+            <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println("Green Cards : "+boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
        			
        <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>" ></div>
        

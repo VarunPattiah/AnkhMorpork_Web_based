@@ -4,7 +4,7 @@
 
 /*
 
-Khurram Shahzad
+Khurram Shahzad,varunS
 http://www.bizonesolutins.com/
 Mar, 2015.
 
@@ -48,13 +48,13 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
     -o-transform: scale(1.9);
     transform: scale(1.9);
 }
-#personality_card_1{background-image:url(../images/personality_cards/1.jpg);}
-#personality_card_2{background-image:url(../images/personality_cards/2.jpg);}
-#personality_card_3{background-image:url(../images/personality_cards/3.jpg);}
-#personality_card_4{background-image:url(../images/personality_cards/4.jpg);}
-#personality_card_5{background-image:url(../images/personality_cards/5.jpg);}
-#personality_card_6{background-image:url(../images/personality_cards/6.jpg);}
-#personality_card_7{background-image:url(../images/personality_cards/7.jpg);}
+#personality_card_1{background-image:url(../images/personality_cards/1.png);max-width:100%;vertical-align: middle; max-height:100%;}
+#personality_card_2{background-image:url(../images/personality_cards/2.png);max-width:100%;vertical-align: middle; max-height:100%;}
+#personality_card_3{background-image:url(../images/personality_cards/3.png);max-width:100%;vertical-align: middle; max-height:100%;}
+#personality_card_4{background-image:url(../images/personality_cards/4.png);max-width:100%;vertical-align: middle; max-height:100%;}
+#personality_card_5{background-image:url(../images/personality_cards/5.png);max-width:100%;vertical-align: middle; max-height:100%;}
+#personality_card_6{background-image:url(../images/personality_cards/6.png);max-width:100%;vertical-align: middle; max-height:100%;}
+#personality_card_7{background-image:url(../images/personality_cards/7.png);max-width:100%;vertical-align: middle; max-height:100%;}
 #backside_card{background-image:url(../images/backside.jpg);}
 .event_card{width:64px;height:100px;left:230px;position:absolute; float:left;}
 
@@ -114,8 +114,23 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 #event_card_b1{background-image:url(../images/events_cards/b1.jpg);}
 
+.city_area_card{width:64px;height:100px;left:230px;position:absolute; float:left;}
+#city_area_card_1{background-image:url(../images/City_area_cards/1.jpg);};
+#city_area_card_2{background-image:url(../images/City_area_cards/2.jpg);};
+#city_area_card_3{background-image:url(../images/City_area_cards/3.jpg);};
+#city_area_card_4{background-image:url(../images/City_area_cards/4.jpg);};
+#city_area_card_5{background-image:url(../images/City_area_cards/5.jpg);};
+#city_area_card_6{background-image:url(../images/City_area_cards/6.jpg);};
+#city_area_card_7{background-image:url(../images/City_area_cards/7.jpg);};
+#city_area_card_8{background-image:url(../images/City_area_cards/8.jpg);};
+#city_area_card_9{background-image:url(../images/City_area_cards/9.jpg);};
+#city_area_card_10{background-image:url(../images/City_area_cards/10.jpg);};
+#city_area_card_11{background-image:url(../images/City_area_cards/11.jpg);};
+#city_area_card_12{background-image:url(../images/City_area_cards/12.jpg);};
+
 .player .personality_card{left:140px;position:absolute; float:left;}
 .player .event_card{left:230px;position:absolute;}
+.player .city_area_card{left:230px;position:absolute;}
 .player .minion{ left:20px; position:absolute; float:left;}
 .player .building{ left:55px; position:absolute;}
 .player .dollor{ left:90px; position:absolute;}
