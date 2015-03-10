@@ -6,6 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="../css/style.css" rel="stylesheet" type="text/css">  
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/support.js"></script>
 <title>Ankh Morpork</title>
 </head>
 <body>
@@ -17,7 +19,7 @@
 	   String playerNamelist=request.getParameter("Playername");	
 	   String[] playerlist=playerNamelist.split(",");
 	   BoardManager boardManager=ankhMorPorkController.initializeNewGame(noOfPlayer,playerNamelist);
-	   String[] colors = { "red", "blue", "green", "yellow" };
+
 	%> 
 	<b>Player turn :</b> = <%=boardManager.getBoard().getPlayerTurn() %>
     
@@ -68,7 +70,7 @@
              <div id="building-1" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
             <div id="building-2" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
             <div id="building-3" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>>" draggable="true"></div>   
-            
+             <div id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>" class="drag personality_card" draggable="true"></div> 
             
         
         </div>

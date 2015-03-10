@@ -42,7 +42,12 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 .minion, .building, .dollor, .trouble{width:30px;height:30px;}
 .demon, .troll{width:50px;height:50px;}
 .personality_card{width:64px;height:100px;left:165px;position:absolute; float:left;}
-
+.personality_card:hover {
+    -webkit-transform: scale(1.6); 
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+}
 #personality_card_1{background-image:url(../images/personality_cards/1.jpg);}
 #personality_card_2{background-image:url(../images/personality_cards/2.jpg);}
 #personality_card_3{background-image:url(../images/personality_cards/3.jpg);}
@@ -50,7 +55,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 #personality_card_5{background-image:url(../images/personality_cards/5.jpg);}
 #personality_card_6{background-image:url(../images/personality_cards/6.jpg);}
 #personality_card_7{background-image:url(../images/personality_cards/7.jpg);}
-
+#backside_card{background-image:url(../images/backside.jpg);}
 .event_card{width:64px;height:100px;left:230px;position:absolute; float:left;}
 
 #event_card_g1{background-image:url(../images/events_cards/g1.jpg);}

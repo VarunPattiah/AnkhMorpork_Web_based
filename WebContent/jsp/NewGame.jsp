@@ -5,8 +5,8 @@
 <meta  charset="UTF-8">
 <title>Ankh Morpork</title>
 <link rel = "stylesheet" type = "text/css" href= "../styles/global.css	">
-<script type="text/javascript" src="../js/support.js"></script>
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/support.js"></script>
 </head>
 <body  style="background-image: url(../images/Ankh1.jpg)">
 <form action="" id="form1">

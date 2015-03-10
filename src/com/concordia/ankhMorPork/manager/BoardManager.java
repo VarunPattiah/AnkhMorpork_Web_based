@@ -8,11 +8,7 @@ package com.concordia.ankhMorPork.manager;
  */
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -36,24 +32,13 @@ public class BoardManager {
 	private Integer moneyDistributedCount=0;
 	public static HashMap<String, String> randomCardsDescription;
 	public static HashMap<Integer, HashMap<String, String>> randomEventCards;
-	//Static block to load Random EventCards
-		static {
-			
-			String path = new BoardManager().getClass().getClassLoader().getResource("").getPath();
-			String fullPath=null;
-			try {
-				fullPath = URLDecoder.decode(path, "UTF-8");
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			String tempPath[]= fullPath.split("/.metadata/.plugins/");
-			String pathArr= (String) tempPath[0].substring(1);
-			Global.FILE_PATH=pathArr+"/WebPage";
-			Scanner inFile1;
-			Integer i=1;
-			try {
-				inFile1 = new Scanner(new File(Global.FILE_PATH+"/resources/RandomEventCard.txt"));
+	// Static block to load Random EventCards
+	static {
+		Scanner inFile1;
+		Integer i = 1;
+		try {
+			inFile1 = new Scanner(new File(Global.FILE_PATH
+					+ "/resources/RandomEventCard.txt"));
 
 				while (inFile1.hasNext()) {
 					StringBuilder sb = new StringBuilder();
