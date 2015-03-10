@@ -41,12 +41,16 @@
       <div id="troll-1" class="drag troll" draggable="true"></div> 
       <div id="demon-1" class="drag demon" draggable="true"></div>
       
-       <% for(int j = 0; j < boardManager.getBoard().getCityAreaCard().size(); j++) { System.out.println("CityAreaCard : "+boardManager.getBoard().getCityAreaCard().get(j));%>
+       <% for(int j = 0; j < boardManager.getBoard().getCityAreaCard().size(); j++) { System.out.println("CityAreaCard : "+boardManager.getBoard().getCityAreaCard().get(j).getIdentifier());%>
        			
        <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j) %>" ></div>
        
         <% } %> 
-     
+      <% for(int j = 0; j < boardManager.getBoard().getRandomEventCard().size(); j++) { System.out.println("RandomEventCard : "+boardManager.getBoard().getRandomEventCard().get(j));%>
+       			
+       <div id="random_event_card_<%=boardManager.getBoard().getRandomEventCard().get(j) %>" ></div>
+       
+        <% } %> 
      
      
             

@@ -57,7 +57,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 #personality_card_7{background-image:url(../images/personality_cards/7.png);max-width:100%;vertical-align: middle; max-height:100%;}
 #backside_card{background-image:url(../images/backside.jpg);}
 .event_card{width:64px;height:100px;left:230px;position:absolute; float:left;}
-
+.random_event_card{width:64px;height:100px;left:230px;position:absolute; float:left;}
 #event_card_g1{background-image:url(../images/events_cards/g1.jpg);}
 #event_card_g2{background-image:url(../images/events_cards/g2.jpg);}
 #event_card_g3{background-image:url(../images/events_cards/g3.jpg);}
@@ -127,6 +127,21 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 #city_area_card_10{background-image:url(../images/City_area_cards/10.jpg);};
 #city_area_card_11{background-image:url(../images/City_area_cards/11.jpg);};
 #city_area_card_12{background-image:url(../images/City_area_cards/12.jpg);};
+
+.random_event_card{width:64px;height:100px;left:230px;position:absolute; float:left;}
+#random_event_card_1{background-image:url(../images/Random_event_cards/r1.png);};
+#random_event_card_2{background-image:url(../images/Random_event_cards/r2.png);};
+#random_event_card_3{background-image:url(../images/Random_event_cards/r3.png);};
+#random_event_card_4{background-image:url(../images/Random_event_cards/r4.png);};
+#random_event_card_5{background-image:url(../images/Random_event_cards/r5.png);};
+#random_event_card_6{background-image:url(../images/Random_event_cards/r6.png);};
+#random_event_card_7{background-image:url(../images/Random_event_cards/r7.png);};
+#random_event_card_8{background-image:url(../images/Random_event_cards/r8.png);};
+#random_event_card_9{background-image:url(../images/Random_event_cards/r9.png);};
+#random_event_card_10{background-image:url(../images/Random_event_cards/r10.png);};
+#random_event_card_11{background-image:url(../images/Random_event_cards/r11.png);};
+#random_event_card_12{background-image:url(../images/Random_event_cards/r12.png);};
+
 
 .player .personality_card{left:140px;position:absolute; float:left;}
 .player .event_card{left:230px;position:absolute;}
