@@ -70,9 +70,12 @@
              <div id="building-1" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
             <div id="building-2" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
             <div id="building-3" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>>" draggable="true"></div>   
-             <div id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>" class="drag personality_card" draggable="true"></div> 
-            
-        
+             <div id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>"  class="drag personality_card" draggable="true"></div> 
+            <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println(boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
+       			
+       <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>" ></div>
+       
+        <% } %>
         </div>
         <% } %>
         </div>
@@ -100,7 +103,6 @@
 
 		<script type="text/javascript">
 		$('document').ready(init);
-		
         function init(){
             $('.drag').bind('dragstart', function(event) {
                 event.originalEvent.dataTransfer.setData("text/plain", event.target.getAttribute('id'));

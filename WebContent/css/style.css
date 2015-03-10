@@ -43,10 +43,10 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 .demon, .troll{width:50px;height:50px;}
 .personality_card{width:64px;height:100px;left:165px;position:absolute; float:left;}
 .personality_card:hover {
-    -webkit-transform: scale(1.6); 
-    -moz-transform: scale(1.6);
-    -o-transform: scale(1.6);
-    transform: scale(1.6);
+    -webkit-transform: scale(1.9); 
+    -moz-transform: scale(1.9);
+    -o-transform: scale(1.9);
+    transform: scale(1.9);
 }
 #personality_card_1{background-image:url(../images/personality_cards/1.jpg);}
 #personality_card_2{background-image:url(../images/personality_cards/2.jpg);}
@@ -65,6 +65,52 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 #event_card_g5{background-image:url(../images/events_cards/g5.jpg);}
 #event_card_g6{background-image:url(../images/events_cards/g6.jpg);}
 #event_card_g7{background-image:url(../images/events_cards/g7.jpg);}
+#event_card_g8{background-image:url(../images/events_cards/g8.jpg);}
+#event_card_g9{background-image:url(../images/events_cards/g9.jpg);}
+#event_card_g10{background-image:url(../images/events_cards/g10.jpg);}
+#event_card_g11{background-image:url(../images/events_cards/g11.jpg);}
+#event_card_g12{background-image:url(../images/events_cards/g12.jpg);}
+#event_card_g13{background-image:url(../images/events_cards/g13.jpg);}
+#event_card_g14{background-image:url(../images/events_cards/g14.jpg);}
+#event_card_g15{background-image:url(../images/events_cards/g15.jpg);}
+#event_card_g16{background-image:url(../images/events_cards/g16.jpg);}
+#event_card_g17{background-image:url(../images/events_cards/g17.jpg);}
+#event_card_g18{background-image:url(../images/events_cards/g18.jpg);}
+#event_card_g19{background-image:url(../images/events_cards/g19.jpg);}
+#event_card_g20{background-image:url(../images/events_cards/g20.jpg);}
+#event_card_g21{background-image:url(../images/events_cards/g21.jpg);}
+#event_card_g22{background-image:url(../images/events_cards/g22.jpg);}
+#event_card_g23{background-image:url(../images/events_cards/g23.jpg);}
+#event_card_g24{background-image:url(../images/events_cards/g24.jpg);}
+#event_card_g25{background-image:url(../images/events_cards/g25.jpg);}
+#event_card_g26{background-image:url(../images/events_cards/g26.jpg);}
+#event_card_g27{background-image:url(../images/events_cards/g27.jpg);}
+#event_card_g28{background-image:url(../images/events_cards/g28.jpg);}
+#event_card_g29{background-image:url(../images/events_cards/g29.jpg);}
+#event_card_g30{background-image:url(../images/events_cards/g30.jpg);}
+#event_card_g31{background-image:url(../images/events_cards/g31.jpg);}
+#event_card_g32{background-image:url(../images/events_cards/g32.jpg);}
+#event_card_g33{background-image:url(../images/events_cards/g33.jpg);}
+#event_card_g34{background-image:url(../images/events_cards/g34.jpg);}
+#event_card_g35{background-image:url(../images/events_cards/g35.jpg);}
+#event_card_g36{background-image:url(../images/events_cards/g36.jpg);}
+#event_card_g37{background-image:url(../images/events_cards/g37.jpg);}
+#event_card_g38{background-image:url(../images/events_cards/g38.jpg);}
+#event_card_g39{background-image:url(../images/events_cards/g39.jpg);}
+#event_card_g40{background-image:url(../images/events_cards/g40.jpg);}
+#event_card_g41{background-image:url(../images/events_cards/g41.jpg);}
+#event_card_g42{background-image:url(../images/events_cards/g42.jpg);}
+#event_card_g43{background-image:url(../images/events_cards/g43.jpg);}
+#event_card_g44{background-image:url(../images/events_cards/g44.jpg);}
+#event_card_g45{background-image:url(../images/events_cards/g45.jpg);}
+#event_card_g46{background-image:url(../images/events_cards/g46.jpg);}
+#event_card_g47{background-image:url(../images/events_cards/g47.jpg);}
+#event_card_g48{background-image:url(../images/events_cards/g48.jpg);}
+#event_card_g49{background-image:url(../images/events_cards/g49.jpg);}
+#event_card_g50{background-image:url(../images/events_cards/g50.jpg);}
+#event_card_g51{background-image:url(../images/events_cards/g51.jpg);}
+#event_card_g52{background-image:url(../images/events_cards/g52.jpg);}
+#event_card_g53{background-image:url(../images/events_cards/g53.jpg);}
 
 #event_card_b1{background-image:url(../images/events_cards/b1.jpg);}
 
@@ -94,13 +140,13 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 
 #board{width: 100%;min-height:100px;position:relative;float:left;}
-#players{width: 25%;float:left;}
+#players{width: 40%;float:left;}
 .player, .common{ width:100%;}
 
-#fullboard{background:url(../images/bg_game.jpg) no-repeat left top;width:75%; min-height:1045px;position:relative; float:left;}
+#fullboard{background:url(../images/bg_game.jpg) no-repeat left top;width:60%; min-height:1045px;position:relative; float:left;}
 .title{background-color:#52460a;text-align:center;color:white;padding: 2px 0px;}
 
-.player, .common{width: 300px;min-height:150px;border: 2px solid black;}
+.player, .common{width: 500px;min-height:150px;border: 2px solid black;}
 .board_area{ position:absolute; border:0px solid #F8F8F8;}
 #area_1{height: 93px; width:200px; top: 110px;left: 390px;}
 #area_2{height: 91px; width: 150px; top: 232px; left: 328px;}
