@@ -48,7 +48,7 @@
       
        <% for(int j = 0; j < boardManager.getBoard().getCityAreaCard().size(); j++) { System.out.println("CityAreaCard : "+boardManager.getBoard().getCityAreaCard().get(j).getIdentifier());%>
        			
-       <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j) %>" ></div>
+       <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j).getIdentifier() %>" class="city_area_card" ></div>
        
         <% } %> 
       <% for(int j = 0; j < boardManager.getBoard().getRandomEventCard().size(); j++) { System.out.println("RandomEventCard : "+boardManager.getBoard().getRandomEventCard().get(j));%>
@@ -78,7 +78,7 @@
              <button id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>"  class="personality_card fadeandscale_open" alt="personality_cards/<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>.png">Personality Card</button> 
             <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println("Green Cards : "+boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
        			
-       <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>" ></div>
+      	 <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>"  class="event_card"></div>
        
         <% } %>
         </div>
@@ -87,24 +87,13 @@
       
         
         
-        <div id="fullboard">        
-                <div id="area_1" class="board_area"></div>			
-                <div id="area_2" class="board_area"></div>        
-                <div id="area_3" class="board_area"></div> 
-                <div id="area_4" class="board_area"></div>			
-                <div id="area_5" class="board_area"></div>        
-                <div id="area_6" class="board_area"></div> 
-                <div id="area_7" class="board_area"></div>			
-                <div id="area_8" class="board_area"></div>        
-                <div id="area_9" class="board_area"></div> 
-                <div id="area_10" class="board_area"></div>			
-                <div id="area_11" class="board_area"></div>        
-                <div id="area_12" class="board_area"></div>              
+        <div id="fullboard"> 
+        <% for(int i=0;i<12;i++) {%>     
+                <div id="area_<%=i%>" class="board_area"></div>			
+             
+         <%} %>            
         </div>
         </div>
-		
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js">
-        </script>
 
 		<script type="text/javascript">
 		$('document').ready(init);
