@@ -56,7 +56,7 @@ public class AnkhMorPorkController {
 	{
 		String html="";
 		int i=this.boardManager.getBoard().getArea().get(areaNumber).getColorOfMinion().size();
-		System.out.println("i : "+i);
+		System.out.println("i : "+i+"  Area Name : "+this.boardManager.getBoard().getArea().get(areaNumber).getIdentifier());
 		while(i>0){
 				html+="<div id=\"minion-"+(i)+"\" class=\"drag minion minion-"+this.boardManager.getBoard().getArea().get(areaNumber).getColorOfMinion().get(i-1).toLowerCase()+"\" draggable=\"true\"></div>";
 				
