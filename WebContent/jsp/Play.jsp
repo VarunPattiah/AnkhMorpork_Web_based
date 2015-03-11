@@ -14,6 +14,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="../css/style.css" rel="stylesheet" type="text/css">  
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+
+<!-- jQuery Popup Overlay -->
+<script type="text/javascript" src="../js/jquery.popupoverlay.js"></script>
+
+
 <script type="text/javascript" src="../js/support.js"></script>
 <title>Ankh Morpork</title>
 </head>
@@ -70,7 +75,7 @@
              <div id="building-1" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
             <div id="building-2" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
             <div id="building-3" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>>" draggable="true"></div>   
-             <div id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>"  class="drag personality_card" draggable="true"></div> 
+             <div id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>"  class="drag personality_card fadeandscale_open" alt="personality_cards/<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>.png" draggable="true"></div> 
             <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println("Green Cards : "+boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
        			
        <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>" ></div>
@@ -126,6 +131,29 @@
 			});
         }
 		</script>
+
+<!-- Fade & scale -->
+<div id="fadeandscale" class="well">
+  
+  <div id="show_card"></div>
+ 
+</div>
+
+<script>
+$(document).ready(function () {
+
+  $('.fadeandscale_open').click(function(){
+	  
+	  $('#show_card').html("<img src='../images/"+$(this).attr('alt')+"' width='320'>");
+  });
+    $('#fadeandscale').popup({
+        pagecontainer: '.container',
+        transition: 'all 0.3s'
+    });
+
+});
+</script>
+        
 	</body>
 </body>
 </html>
