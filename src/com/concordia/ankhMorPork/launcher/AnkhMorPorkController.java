@@ -52,6 +52,29 @@ public class AnkhMorPorkController {
 		return boardManager;
 		
 	}
+	public String getAreaDetails(int areaNumber)
+	{
+		String html="";
+		int i=this.boardManager.getBoard().getArea().get(areaNumber).getColorOfMinion().size();
+		while(i!=0){
+				html+="<div id=\"minion-"+i+"\" class=\"drag minion minion-"+this.boardManager.getBoard().getArea().get(areaNumber).getColorOfMinion().get(i).toLowerCase()+" draggable=\"true\"></div>";
+				i--;
+		}
+		if(this.boardManager.getBoard().getArea().get(areaNumber).getTroubleMaker()){
+			html="";
+		}
+		if(this.boardManager.getBoard().getArea().get(areaNumber).getBuilding()){
+			html="";
+		}
+		if(this.boardManager.getBoard().getArea().get(areaNumber).getNoOfDemon()!=0){
+			html="";
+		}
+		if(this.boardManager.getBoard().getArea().get(areaNumber).getNoOfTroll()!=0){
+			html="";
+		}
+		System.out.println(html);
+		return html;
+	}
 	public static void main(String args[])
 	{
 		AnkhMorPorkController a=new AnkhMorPorkController();
