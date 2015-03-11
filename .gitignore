@@ -1,0 +1,5 @@
+*.class
+build/classes/com/concordia/ankhMorPork/common/Global$Color.class
+build/
+bin/
+
