@@ -87,7 +87,7 @@
         
         <div id="fullboard"> 
         <% for(int i=0;i<12;i++) {%>     
-                <div id="area_<%=i%>" class="board_area"></div>			
+                <div id="area_<%=i%>" class="board_area"><%=ankhMorPorkController.getAreaDetails(i) %></div>			
              
          <%} %>            
         </div>
