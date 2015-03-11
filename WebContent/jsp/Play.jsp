@@ -46,10 +46,8 @@
       <div id="troll-1" class="drag troll" draggable="true"></div> 
       <div id="demon-1" class="drag demon" draggable="true"></div>
       
-       <% for(int j = 0; j < boardManager.getBoard().getCityAreaCard().size(); j++) { System.out.println("CityAreaCard : "+boardManager.getBoard().getCityAreaCard().get(j).getIdentifier());%>
-       			
-       <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j).getIdentifier() %>" class="city_area_card" ></div>
-       
+       <% for(int j = 0; j < boardManager.getBoard().getCityAreaCard().size(); j++) { System.out.println("CityAreaCard : "+boardManager.getBoard().getCityAreaCard().get(j).getIdentifier());%>	
+       <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j).getIdentifier() %>" class="city_area_card fadeandscale_open" alt="City_area_cards/<%=boardManager.getBoard().getCityAreaCard().get(j).getIdentifier() %>.png"></div>
         <% } %> 
       <% for(int j = 0; j < boardManager.getBoard().getRandomEventCard().size(); j++) { System.out.println("RandomEventCard : "+boardManager.getBoard().getRandomEventCard().get(j));%>
        			
@@ -78,7 +76,7 @@
              <button id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>"  class="personality_card fadeandscale_open" alt="personality_cards/<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>.png">Personality Card</button> 
             <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println("Green Cards : "+boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
        			
-      	 <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>"  class="event_card"></div>
+      	 <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>"  class="event_card fadeandscale_open" alt="green_cards/g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j)%>.png"></div>
        
         <% } %>
         </div>
