@@ -41,7 +41,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 .minion, .building, .dollor, .trouble{width:30px;height:30px;}
 .demon, .troll{width:50px;height:50px;}
-.personality_card{height:40px;left:105px;position:absolute; float:left; padding:0px 10px; margin-top:5px; background:#52460a; color:#fff;}
+.personality_card{height:40px;left:10px;top:250px;position:absolute; float:left;margin-top:5px; background:#52460a; color:#fff;}
 
 /*
 #personality_card_1{background-image:url(../images/personality_cards/1.png);max-width:100%;vertical-align: middle; max-height:100%;}
@@ -54,65 +54,65 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 */
 
 #backside_card{background-image:url(../images/backside.jpg);}
-.event_card{width:64px;height:100px;left:230px;position:absolute; float:left;margin:5px; background:#52460a; color:#fff;}
+.event_card{width:64px;height:100px;left:150px;position:absolute; float:left;margin:5px; background:#52460a; color:#fff;}
 .random_event_card{width:64px;height:100px;left:230px;position:absolute; float:left;margin-top:5px; background:#52460a; color:#fff;}
-#event_card_g1{background-image:url(../images/green_cards/g1.png);background-size:contain;position:relative;left:70px;}
-#event_card_g2{background-image:url(../images/green_cards/g2.png);background-size:contain;position:relative;left:70px;}
-#event_card_g3{background-image:url(../images/green_cards/g3.png);background-size:contain;position:relative;left:70px;}
-#event_card_g4{background-image:url(../images/green_cards/g4.png);background-size:contain;position:relative;left:70px;}
-#event_card_g5{background-image:url(../images/green_cards/g5.png);background-size:contain;position:relative;left:70px;}
-#event_card_g6{background-image:url(../images/green_cards/g6.png);background-size:contain;position:relative;left:70px;}
-#event_card_g7{background-image:url(../images/green_cards/g7.png);background-size:contain;position:relative;left:70px;}
-#event_card_g8{background-image:url(../images/green_cards/g8.png);background-size:contain;position:relative;left:70px;}
-#event_card_g9{background-image:url(../images/green_cards/g9.png);background-size:contain;position:relative;left:70px;}
-#event_card_g10{background-image:url(../images/green_cards/g10.png);background-size:contain;position:relative;left:70px;}
-#event_card_g11{background-image:url(../images/green_cards/g11.png);background-size:contain;position:relative;left:70px;}
-#event_card_g12{background-image:url(../images/green_cards/g12.png);background-size:contain;position:relative;left:70px;}
-#event_card_g13{background-image:url(../images/green_cards/g13.png);background-size:contain;position:relative;left:70px;}
-#event_card_g14{background-image:url(../images/green_cards/g14.png);background-size:contain;position:relative;left:70px;}
-#event_card_g15{background-image:url(../images/green_cards/g15.png);background-size:contain;position:relative;left:70px;}
-#event_card_g16{background-image:url(../images/green_cards/g16.png);background-size:contain;position:relative;left:70px;}
-#event_card_g17{background-image:url(../images/green_cards/g17.png);background-size:contain;position:relative;left:70px;}
-#event_card_g18{background-image:url(../images/green_cards/g18.png);background-size:contain;position:relative;left:70px;}
-#event_card_g19{background-image:url(../images/green_cards/g19.png);background-size:contain;position:relative;left:70px;}
-#event_card_g20{background-image:url(../images/green_cards/g20.png);background-size:contain;position:relative;left:70px;}
-#event_card_g21{background-image:url(../images/green_cards/g21.png);background-size:contain;position:relative;left:70px;}
-#event_card_g22{background-image:url(../images/green_cards/g22.png);background-size:contain;position:relative;left:70px;}
-#event_card_g23{background-image:url(../images/green_cards/g23.png);background-size:contain;position:relative;left:70px;}
-#event_card_g24{background-image:url(../images/green_cards/g24.png);background-size:contain;position:relative;left:70px;}
-#event_card_g25{background-image:url(../images/green_cards/g25.png);background-size:contain;position:relative;left:70px;}
-#event_card_g26{background-image:url(../images/green_cards/g26.png);background-size:contain;position:relative;left:70px;}
-#event_card_g27{background-image:url(../images/green_cards/g27.png);background-size:contain;position:relative;left:70px;}
-#event_card_g28{background-image:url(../images/green_cards/g28.png);background-size:contain;position:relative;left:70px;}
-#event_card_g29{background-image:url(../images/green_cards/g29.png);background-size:contain;position:relative;left:70px;}
-#event_card_g30{background-image:url(../images/green_cards/g30.png);background-size:contain;position:relative;left:70px;}
-#event_card_g31{background-image:url(../images/green_cards/g31.png);background-size:contain;position:relative;left:70px;}
-#event_card_g32{background-image:url(../images/green_cards/g32.png);background-size:contain;position:relative;left:70px;}
-#event_card_g33{background-image:url(../images/green_cards/g33.png);background-size:contain;position:relative;left:70px;}
-#event_card_g34{background-image:url(../images/green_cards/g34.png);background-size:contain;position:relative;left:70px;}
-#event_card_g35{background-image:url(../images/green_cards/g35.png);background-size:contain;position:relative;left:70px;}
-#event_card_g36{background-image:url(../images/green_cards/g36.png);background-size:contain;position:relative;left:70px;}
-#event_card_g37{background-image:url(../images/green_cards/g37.png);background-size:contain;position:relative;left:70px;}
-#event_card_g38{background-image:url(../images/green_cards/g38.png);background-size:contain;position:relative;left:70px;}
-#event_card_g39{background-image:url(../images/green_cards/g39.png);background-size:contain;position:relative;left:70px;}
-#event_card_g40{background-image:url(../images/green_cards/g40.png);background-size:contain;position:relative;left:70px;}
-#event_card_g41{background-image:url(../images/green_cards/g41.png);background-size:contain;position:relative;left:70px;}
-#event_card_g42{background-image:url(../images/green_cards/g42.png);background-size:contain;position:relative;left:70px;}
-#event_card_g43{background-image:url(../images/green_cards/g43.png);background-size:contain;position:relative;left:70px;}
-#event_card_g44{background-image:url(../images/green_cards/g44.png);background-size:contain;position:relative;left:70px;}
-#event_card_g45{background-image:url(../images/green_cards/g45.png);background-size:contain;position:relative;left:70px;}
-#event_card_g46{background-image:url(../images/green_cards/g46.png);background-size:contain;position:relative;left:70px;}
-#event_card_g47{background-image:url(../images/green_cards/g47.png);background-size:contain;position:relative;left:70px;}
-#event_card_g48{background-image:url(../images/green_cards/g48.png);background-size:contain;position:relative;left:70px;}
-#event_card_g49{background-image:url(../images/green_cards/g49.png);background-size:contain;position:relative;left:70px;}
-#event_card_g50{background-image:url(../images/green_cards/g50.png);background-size:contain;position:relative;left:70px;}
-#event_card_g51{background-image:url(../images/green_cards/g51.png);background-size:contain;position:relative;left:70px;}
-#event_card_g52{background-image:url(../images/green_cards/g52.png);background-size:contain;position:relative;left:70px;}
-#event_card_g53{background-image:url(../images/green_cards/g53.png);background-size:contain;position:relative;left:70px;}
+#event_card_g1{background-image:url(../images/green_cards/g1.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g2{background-image:url(../images/green_cards/g2.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g3{background-image:url(../images/green_cards/g3.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g4{background-image:url(../images/green_cards/g4.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g5{background-image:url(../images/green_cards/g5.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g6{background-image:url(../images/green_cards/g6.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g7{background-image:url(../images/green_cards/g7.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g8{background-image:url(../images/green_cards/g8.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g9{background-image:url(../images/green_cards/g9.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g10{background-image:url(../images/green_cards/g10.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g11{background-image:url(../images/green_cards/g11.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g12{background-image:url(../images/green_cards/g12.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g13{background-image:url(../images/green_cards/g13.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g14{background-image:url(../images/green_cards/g14.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g15{background-image:url(../images/green_cards/g15.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g16{background-image:url(../images/green_cards/g16.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g17{background-image:url(../images/green_cards/g17.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g18{background-image:url(../images/green_cards/g18.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g19{background-image:url(../images/green_cards/g19.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g20{background-image:url(../images/green_cards/g20.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g21{background-image:url(../images/green_cards/g21.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g22{background-image:url(../images/green_cards/g22.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g23{background-image:url(../images/green_cards/g23.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g24{background-image:url(../images/green_cards/g24.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g25{background-image:url(../images/green_cards/g25.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g26{background-image:url(../images/green_cards/g26.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g27{background-image:url(../images/green_cards/g27.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g28{background-image:url(../images/green_cards/g28.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g29{background-image:url(../images/green_cards/g29.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g30{background-image:url(../images/green_cards/g30.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g31{background-image:url(../images/green_cards/g31.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g32{background-image:url(../images/green_cards/g32.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g33{background-image:url(../images/green_cards/g33.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g34{background-image:url(../images/green_cards/g34.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g35{background-image:url(../images/green_cards/g35.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g36{background-image:url(../images/green_cards/g36.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g37{background-image:url(../images/green_cards/g37.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g38{background-image:url(../images/green_cards/g38.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g39{background-image:url(../images/green_cards/g39.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g40{background-image:url(../images/green_cards/g40.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g41{background-image:url(../images/green_cards/g41.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g42{background-image:url(../images/green_cards/g42.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g43{background-image:url(../images/green_cards/g43.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g44{background-image:url(../images/green_cards/g44.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g45{background-image:url(../images/green_cards/g45.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g46{background-image:url(../images/green_cards/g46.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g47{background-image:url(../images/green_cards/g47.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g48{background-image:url(../images/green_cards/g48.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g49{background-image:url(../images/green_cards/g49.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g50{background-image:url(../images/green_cards/g50.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g51{background-image:url(../images/green_cards/g51.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g52{background-image:url(../images/green_cards/g52.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
+#event_card_g53{background-image:url(../images/green_cards/g53.png);background-size:contain;position:relative;left:45px;margin-left: auto;	}
 
 #event_card_b1{background-image:url(../images/events_cards/b1.jpg);}
 
-.city_area_card{width:64px;height:100px;left:230px;position:absolute; float:left;}
+.city_area_card{width:64px;height:100px;left:230px;position:absolute;margin:5px;float:left;}
 #city_area_card_1{background-image:url(../images/City_area_cards/1.png);background-size:contain;};
 #city_area_card_2{background-image:url(../images/City_area_cards/2.png);background-size:contain;};
 #city_area_card_3{background-image:url(../images/City_area_cards/3.png);background-size:contain;};
