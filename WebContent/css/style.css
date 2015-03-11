@@ -42,12 +42,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 .minion, .building, .dollor, .trouble{width:30px;height:30px;}
 .demon, .troll{width:50px;height:50px;}
 .personality_card{width:64px;height:100px;left:165px;position:absolute; float:left;}
-.personality_card:hover {
-    -webkit-transform: scale(1.9); 
-    -moz-transform: scale(1.9);
-    -o-transform: scale(1.9);
-    transform: scale(1.9);
-}
+
 #personality_card_1{background-image:url(../images/personality_cards/1.png);max-width:100%;vertical-align: middle; max-height:100%;}
 #personality_card_2{background-image:url(../images/personality_cards/2.png);max-width:100%;vertical-align: middle; max-height:100%;}
 #personality_card_3{background-image:url(../images/personality_cards/3.png);max-width:100%;vertical-align: middle; max-height:100%;}
@@ -193,3 +188,18 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 *[draggable=true]{float:left;;margin:10px 0px;font-weight:bold;}
 .cardTitle{background-color: rgb(255,255,255);border:2px solid white;}
+
+
+
+#fadeandscale {
+    -webkit-transform: scale(0.8);
+       -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+}
+.popup_visible #fadeandscale {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
