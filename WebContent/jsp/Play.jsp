@@ -43,7 +43,7 @@
       
        <% for(int j = 0; j < boardManager.getBoard().getCityAreaCard().size(); j++) { System.out.println("CityAreaCard : "+boardManager.getBoard().getCityAreaCard().get(j).getIdentifier());%>
        			
-       <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j) %>" ></div>
+       <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j).getIdentifier() %>" class="city_area_card" ></div>
        
         <% } %> 
       <% for(int j = 0; j < boardManager.getBoard().getRandomEventCard().size(); j++) { System.out.println("RandomEventCard : "+boardManager.getBoard().getRandomEventCard().get(j));%>
@@ -73,7 +73,7 @@
              <div id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>"  class="drag personality_card" draggable="true"></div> 
             <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println("Green Cards : "+boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
        			
-       <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>" ></div>
+      	 <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>"  class="event_card"></div>
        
         <% } %>
         </div>
