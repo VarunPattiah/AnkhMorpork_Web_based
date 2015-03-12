@@ -168,6 +168,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 
 #board{width: 100%;min-height:100px;position:relative;float:left;background-color:#4C4C33;}
+#board .save_game{right:80px; top:25px;position:absolute;}
 #players{width: 40%;float:left;}
 .player, .common{ width:100%;}
 
@@ -175,6 +176,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 .title{background-color:#52460a;text-align:center;color:white;padding: 2px 0px;}
 
 .player, .common{width: 500px;min-height:150px;border: 2px solid black;}
+.save_game{width:100px;height:30px;background:#52460a; color:#fff;}
 .board_area{ position:absolute; border:0px solid #F8F8F8;}
 #area_1{height: 93px; width:200px; top: 110px;left: 390px;}
 #area_2{height: 91px; width: 150px; top: 232px; left: 328px;}

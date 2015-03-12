@@ -26,15 +26,17 @@
 	<body>
     <jsp:useBean id="ankhMorPorkController" class="com.concordia.ankhMorPork.launcher.AnkhMorPorkController" /> 
      <div id="board">
-     
 	<% 
 		String gameStatus=request.getParameter("gameStatus");
 		BoardManager boardManager=null;
+		Integer noOfPlayer=0;
+		String playerNamelist="";
+		String[] playerlist=null;
 		if("new".equals(gameStatus))
 		{
-		   Integer noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer"));
-		   String playerNamelist=request.getParameter("Playername");	
-		   String[] playerlist=playerNamelist.split(",");
+		   noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer"));
+		   playerNamelist=request.getParameter("Playername");	
+		   playerlist=playerNamelist.split(",");
 		   boardManager=ankhMorPorkController.initializeNewGame(noOfPlayer,playerNamelist);
 		}else if("resume".equals(gameStatus)){
 			boardManager=ankhMorPorkController.initializeResumeGame(request.getParameter("fileName"));
@@ -93,6 +95,7 @@
         
         
         <div id="fullboard"> 
+        <button class="save_game">Save Game</button>
         <% for(int i=0;i<12;i++) {%>     
                 <div id="area_<%=(i+1)%>" class="board_area"><%=ankhMorPorkController.getAreaDetails(i) %></div>			
              

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.concordia.ankhMorPork.common.Global;
+import com.concordia.ankhMorPork.data.GameStateJsonParser;
 import com.concordia.ankhMorPork.manager.Board;
 import com.concordia.ankhMorPork.manager.BoardManager;
 /**
@@ -54,7 +55,11 @@ public class AnkhMorPorkController {
 	}
 	
 	public BoardManager initializeResumeGame(String filename)
-	{
+	{	
+		if(filename!=null && !(("").equals(filename))){
+		board = GameStateJsonParser.parseJson(filename,
+				this.boardManager.getBoard());
+		}
 		return boardManager;
 	}
 	public String getAreaDetails(int areaNumber)
