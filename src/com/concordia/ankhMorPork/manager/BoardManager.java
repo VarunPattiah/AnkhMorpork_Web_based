@@ -18,8 +18,10 @@ import com.concordia.ankhMorPork.common.Common;
 import com.concordia.ankhMorPork.common.Global;
 
 /**
- *This class Manages the Board Information and manage the game as goes on.
- *All initialization like areaList,personalityCard,cityAreaCardList,randomEventCards and Playercards are done here.
+ * This class Manages the Board Information and manage the game as goes on. All
+ * initialization like
+ * areaList,personalityCard,cityAreaCardList,randomEventCards and Playercards
+ * are done here.
  */
 public class BoardManager {
 
@@ -29,7 +31,7 @@ public class BoardManager {
 	public static List<Area> areaList = new ArrayList<Area>();
 	public List<Player> playerList = new ArrayList<Player>();
 	public static String[] yourArray = null;
-	private Integer moneyDistributedCount=0;
+	private Integer moneyDistributedCount = 0;
 	public static HashMap<String, String> randomCardsDescription;
 	public static HashMap<Integer, HashMap<String, String>> randomEventCards;
 	// Static block to load Random EventCards
@@ -40,110 +42,114 @@ public class BoardManager {
 			inFile1 = new Scanner(new File(Global.FILE_PATH
 					+ "/resources/RandomEventCard.txt"));
 
-				while (inFile1.hasNext()) {
-					StringBuilder sb = new StringBuilder();
-					randomCardsDescription = new HashMap<String, String>();
-					randomEventCards = new HashMap<Integer, HashMap<String, String>>();
-					sb.append(inFile1.nextLine());
-					yourArray = sb.toString().split("|");
-					if (yourArray.length == 2) {
-						randomCardsDescription.put(yourArray[0],yourArray[1]);	
-						randomEventCards.put(i++,randomCardsDescription);
-					}
+			while (inFile1.hasNext()) {
+				StringBuilder sb = new StringBuilder();
+				randomCardsDescription = new HashMap<String, String>();
+				randomEventCards = new HashMap<Integer, HashMap<String, String>>();
+				sb.append(inFile1.nextLine());
+				yourArray = sb.toString().split("|");
+				if (yourArray.length == 2) {
+					randomCardsDescription.put(yourArray[0], yourArray[1]);
+					randomEventCards.put(i++, randomCardsDescription);
 				}
-
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
 
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
-	
-	public BoardManager()
-	{
-		this.board=new Board();
-		this.board=this.initializeCityAreaCard(board);
+
 	}
-	
-	//setter and getters
+
+	public BoardManager() {
+		this.board = new Board();
+		this.board = this.initializeCityAreaCard(board);
+
+	}
+
+	// setter and getters
 	/**
-	 * It's a function which get the board money distributed among the players. 
-	 * It doesn't require any parameter as it's class's getter function. 
+	 * It's a function which get the board money distributed among the players.
+	 * It doesn't require any parameter as it's class's getter function.
 	 * <p>
-	 * It's to get the board money and use to it in some functions. 
-	 *	 
-	 * @return      It return the money value which has been distributed among players.
+	 * It's to get the board money and use to it in some functions.
+	 *
+	 * @return It return the money value which has been distributed among
+	 *         players.
 	 * 
 	 */
-	
+
 	public Integer getMoneyDistributedCount() {
 		return moneyDistributedCount;
 	}
-	
-	
+
 	/**
-	 * It's a function to set board distributed money among players. 
-	 * It doesn't require any parameter as it's class's getter function. 
+	 * It's a function to set board distributed money among players. It doesn't
+	 * require any parameter as it's class's getter function.
 	 * <p>
-	 * It's set the board money and use to set it later stages. 
+	 * It's set the board money and use to set it later stages.
 	 *
-	 * @param  moneyDistributedCount  : Money value is passed to set in member function
+	 * @param moneyDistributedCount
+	 *            : Money value is passed to set in member function
 	 * 
 	 */
-	
+
 	public void setMoneyDistributedCount(Integer moneyDistributedCount) {
 		this.moneyDistributedCount = moneyDistributedCount;
 	}
-	
+
 	/**
-	 * Map is created to load PersonalityCards Information from the text file. 
-	 * It loading the values from a text file which are predefined then randomize them.
+	 * Map is created to load PersonalityCards Information from the text file.
+	 * It loading the values from a text file which are predefined then
+	 * randomize them.
 	 * <p>
-	 * It's initialized the board money and use to set it later stages. 
+	 * It's initialized the board money and use to set it later stages.
 	 *
-	 * @return      It's returning a hash table of personality cards
-	 *  
+	 * @return It's returning a hash table of personality cards
+	 * 
 	 */
 
-	
 	@SuppressWarnings("serial")
 	public static final HashMap<Integer, String> personalityCard = new HashMap<Integer, String>() {
 		{
 			Scanner inFile1;
-			Integer i=1;
+			Integer i = 1;
+			System.out.println(new File(".").getAbsolutePath());
 			try {
-				inFile1 = new Scanner(new File(Global.FILE_PATH+"/resources/PersonalityCard.txt"));
+				inFile1 = new Scanner(new File(Global.FILE_PATH
+						+ "/resources/PersonalityCard.txt"));
 
 				while (inFile1.hasNext()) {
-					put(i++,inFile1.nextLine());
+					put(i++, inFile1.nextLine());
 				}
-		}catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	};
-	
-	
+
 	/**
-	 * This method displays the current Status of the Game.
-	 * It receives the board object which have details of the players like number of players
+	 * This method displays the current Status of the Game. It receives the
+	 * board object which have details of the players like number of players
 	 * playing this game, their color, name etc...
-	 * @param board 	:board class object is passed. 
+	 * 
+	 * @param board
+	 *            :board class object is passed.
 	 */
-	
-	
+
 	public void displayCurrentStatus(Board board) {
-		
+
 		Common.display();
 		System.out.println("                   Game Status");
 		System.out.println("                   ************\n\n");
 		System.out.println("Number Of Players : " + board.getNoOfPlayer());
-		 System.out.println("\nPlayer Turn   : Player No. "+board.getPlayerTurn());
+		System.out.println("\nPlayer Turn   : Player No. "
+				+ board.getPlayerTurn());
 		for (int i = 0; i < board.getNoOfPlayer(); i++) {
-			Player player = new Player((i + 1), board.getPlayerList().get(i).getName(), board.getPlayerList().get(i).getColor());
-			
+			Player player = new Player((i + 1), board.getPlayerList().get(i)
+					.getName(), board.getPlayerList().get(i).getColor());
+
 			System.out.println("Player"
 					+ (i + 1)
 					+ " : "
@@ -153,28 +159,26 @@ public class BoardManager {
 					+ " ) playing as "
 					+ personalityCard.get(board.getPlayerList().get(i)
 							.getPersonalityCard()));
-			
-			
-		}//End of For loop
-		
-		//Board Details
+
+		}// End of For loop
+
+		// Board Details
 		System.out.println("\nArea Details : \n\n");
-		
+
 		System.out.printf("%-30s%-30s%-25s%-25s%-15s%-15s\n", "Area",
 				"Minions", "IsTroubleMakerAvailable", "IsbuildingAvailable",
 				"NoOfDemons", "NoOfTrolls");
-		
-	
-		
+
 		for (int i = 0; i < 12; i++) {
 			System.out.printf("%-30s%-30s%-25s%-25s%-15s%-15s\n",
 					cityAreaCardList.get(i).getName(), board.getArea().get(i)
 							.getColorOfMinion(), board.getArea().get(i)
-							.getTroubleMaker(), board.getArea().get(i).getBuilding(),
-							board.getArea().get(i).getNoOfDemon(), board.getArea().get(i)
-							.getNoOfTroll());		
+							.getTroubleMaker(), board.getArea().get(i)
+							.getBuilding(), board.getArea().get(i)
+							.getNoOfDemon(), board.getArea().get(i)
+							.getNoOfTroll());
 		}
-		
+
 		System.out.println("\n\nPlayer Details :: \n\n");
 		this.setMoneyDistributedCount(0);
 		// Player Statistic
@@ -182,17 +186,20 @@ public class BoardManager {
 			System.out.println(board.getPlayerList().get(i).getName()
 					+ "'s Current Holdings : ");
 			System.out.println("No Of Minions        :"
-					+ (Global.MINIONS - board.getPlayerList().get(i).getMinionsOnBoard()));
+					+ (Global.MINIONS - board.getPlayerList().get(i)
+							.getMinionsOnBoard()));
 			System.out.println("No Of Building       :"
-					+ (Global.BUILDINGS - board.getPlayerList().get(i).getBuildingOnBoard()));
+					+ (Global.BUILDINGS - board.getPlayerList().get(i)
+							.getBuildingOnBoard()));
 			System.out.println("Ankh-Morpork Dollars :"
 					+ board.getPlayerList().get(i).getPlayerMoney() + "\n\n\n");
 			System.out.println("City Area cards: ");
-			this.setMoneyDistributedCount((this.getMoneyDistributedCount()+board.getPlayerList().get(i).getPlayerMoney()));
-			//Print on the screen
-			
-			//City area cards list
-			
+			this.setMoneyDistributedCount((this.getMoneyDistributedCount() + board
+					.getPlayerList().get(i).getPlayerMoney()));
+			// Print on the screen
+
+			// City area cards list
+
 			if (board.getPlayerList().get(i).getCityAreaCard().size() == 0) {
 				System.out.println("No City Area cards attained yet");
 			} else {
@@ -200,38 +207,41 @@ public class BoardManager {
 						.getCityAreaCard().size(); j++) {
 					System.out.println((j + 1)
 							+ ")"
-							+ board.getCityAreaCard().get(
-									board.getPlayerList().get(i)
+							+ board.getCityAreaCard()
+									.get(board.getPlayerList().get(i)
 											.getCityAreaCard().get(j))
 									.getName());
 				}
 			}
-			
+
 			System.out.println("\nPlayer Cards : ");
 			System.out.println(" \tGreen Cards : "
 					+ board.getPlayerList().get(i).getGreenPlayerCards());
 			System.out.println(" \tBrown Cards : "
 					+ board.getPlayerList().get(i).getBrownPlayerCards());
-				
-		}// End of loop		
-		System.out.println("\nThe Bank has " + (board.getBankMoney()-this.getMoneyDistributedCount())
+
+		}// End of loop
+		System.out.println("\nThe Bank has "
+				+ (board.getBankMoney() - this.getMoneyDistributedCount())
 				+ " Ankh-Morpork dollars");
 	}
-	
-	
+
 	/**
-	 * This method initialize the Board for new player and return the board object with playrs 
-	 * details filled.
-	 * @param noOfPlayer : number of player playing
-	 * @param playerList : name of the players
-	 * @param colorList  : color of the player
+	 * This method initialize the Board for new player and return the board
+	 * object with playrs details filled.
+	 * 
+	 * @param noOfPlayer
+	 *            : number of player playing
+	 * @param playerList
+	 *            : name of the players
+	 * @param colorList
+	 *            : color of the player
 	 * @return the initialized board object
 	 */
-	
-	
+
 	public Board initializeBoardforNewPlayer(Integer noOfPlayer,
 			List<String> playerList, List<String> colorList) {
-		Integer playerTurn=0;
+		Integer playerTurn = 0;
 		board = new Board();
 		board.setBankMoney(Global.BANK_MONEY);
 		board.setNoOfPlayer(noOfPlayer);
@@ -239,22 +249,26 @@ public class BoardManager {
 		board = initializeCityAreaCard(board);
 		board = initializeAreaDetails(board, colorList);
 		board = initializeNewPlayer(board, noOfPlayer, playerList, colorList);
-		List<Integer> existingCard=new ArrayList<Integer>();
-		playerTurn=generateRandom(1, noOfPlayer, existingCard);
+		List<Integer> existingCard = new ArrayList<Integer>();
+		playerTurn = generateRandom(1, noOfPlayer, existingCard);
 		board.setPlayerTurn(playerTurn);
 		return board;
 	}
-	
-	
+
 	/**
 	 * This method create Object for new player with initial values
-	 * @param board2        : board object which wil contain player object as its member
-	 * @param noOfPlayer    :Number Of Player
-	 * @param playerNameList:Name of the players
-	 * @param colorList     :Color of the player
+	 * 
+	 * @param board2
+	 *            : board object which wil contain player object as its member
+	 * @param noOfPlayer
+	 *            :Number Of Player
+	 * @param playerNameList
+	 *            :Name of the players
+	 * @param colorList
+	 *            :Color of the player
 	 * @return the initialized board with new players
 	 */
-	
+
 	private Board initializeNewPlayer(Board board2, Integer noOfPlayer,
 			List<String> playerNameList, List<String> colorList) {
 		Integer randomCardNo;
@@ -281,13 +295,15 @@ public class BoardManager {
 		board2.setPlayerList(playerList);
 		return board2;
 	}
-	
+
 	/**
 	 * THis method distribute the playerCards randomly among the player
-	 * @param player : player object to which cards has to be assigned randomly
+	 * 
+	 * @param player
+	 *            : player object to which cards has to be assigned randomly
 	 * @return the player object with assigned random playerCards
 	 */
-	
+
 	private Player distributePlayerCardRandomly(Player player) {
 		List<Integer> greenPlayerCard = player.getGreenPlayerCards();
 		List<Integer> brownPlayerCard = player.getBrownPlayerCards();
@@ -309,10 +325,14 @@ public class BoardManager {
 		player.setBrownPlayerCards(brownPlayerCard);
 		return player;
 	}
+
 	/**
 	 * THis Method initializes the Area's on the board
-	 * @param board2   : board object
-	 * @param colorList:color of the players
+	 * 
+	 * @param board2
+	 *            : board object
+	 * @param colorList
+	 *            :color of the players
 	 * @return
 	 */
 	private Board initializeAreaDetails(Board board2, List<String> colorList) {
@@ -333,16 +353,20 @@ public class BoardManager {
 
 	/**
 	 * This method initializes the cityAreaCards of the board from a text file.
-	 * @param board2 : board object
-	 * @return it returns the Board object with city areas filled with respect to players.
+	 * 
+	 * @param board2
+	 *            : board object
+	 * @return it returns the Board object with city areas filled with respect
+	 *         to players.
 	 */
 	@SuppressWarnings("resource")
 	private Board initializeCityAreaCard(Board board2) {
-
+		System.out.println("initializeCityAreaCardinitializeCityAreaCard");
 		String[] dataArray = null;
 		Scanner inFile1;
 		try {
-			inFile1 = new Scanner(new File(Global.FILE_PATH+"/resources/CityAreaInfo.txt"));
+			inFile1 = new Scanner(new File(Global.FILE_PATH
+					+ "/resources/CityAreaInfo.txt"));
 
 			while (inFile1.hasNext()) {
 				StringBuilder sb = new StringBuilder();
@@ -368,12 +392,17 @@ public class BoardManager {
 
 		return board2;
 	}
+
 	/**
-	 * The function generate random number with given start and end values and randomized the 
-	 * cards.
-	 * @param start		   : random value lower bound
-	 * @param end          : random value upper bound
-	 * @param existingCard : contains the random values already taken before 
+	 * The function generate random number with given start and end values and
+	 * randomized the cards.
+	 * 
+	 * @param start
+	 *            : random value lower bound
+	 * @param end
+	 *            : random value upper bound
+	 * @param existingCard
+	 *            : contains the random values already taken before
 	 * @return the random value not taken before
 	 */
 	public int generateRandom(int start, int end, List<Integer> existingCard) {
@@ -387,27 +416,28 @@ public class BoardManager {
 
 		return random;
 	}
-	//setters and getters method
-	
+
+	// setters and getters method
+
 	/**
-	 * This is setter function to intialized the board 
-	 * cards.
+	 * This is setter function to intialized the board cards.
+	 * 
 	 * @return board initialized value
 	 * 
 	 */
-	
+
 	public Board getBoard() {
 		return board;
 	}
 
 	/**
-	 * This is setter function to intialized the board 
-	 * cards.
-	 * @param board : Gets Board member and initialized it
+	 * This is setter function to intialized the board cards.
+	 * 
+	 * @param board
+	 *            : Gets Board member and initialized it
 	 * 
 	 */
-	
-	
+
 	public void setBoard(Board board) {
 		this.board = board;
 	}

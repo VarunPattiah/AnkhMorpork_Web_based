@@ -56,10 +56,14 @@ public class AnkhMorPorkController {
 	}
 	
 	public BoardManager initializeResumeGame(String filename)
-	{	
+	{	System.out.println("filename : "+filename);
+		
 		if(filename!=null && !(("").equals(filename))){
+			String [] filenames=filename.split("\\\\");
+			filename=filenames[filenames.length-1];System.out.println("filename : "+filename);
 		board = GameStateJsonParser.parseJson(filename,
 				this.boardManager.getBoard());
+		boardManager.setBoard(board);
 		}
 		return boardManager;
 	}

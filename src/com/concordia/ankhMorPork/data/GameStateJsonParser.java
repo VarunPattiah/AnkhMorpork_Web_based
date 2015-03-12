@@ -65,8 +65,8 @@ public class GameStateJsonParser {
 		List<Player> playerList = new ArrayList<Player>();
 		try {
 			Scanner inFile1;
-			inFile1 = new Scanner(new File(Global.SAVED_FILE_DIRECTORY_PATH
-					+ "/" + fileName + ".json"));
+			inFile1 = new Scanner(new File(Global.FILE_PATH+"/"+Global.SAVED_FILE_DIRECTORY_PATH
+					+ "/" + fileName));
 			StringBuilder sb = new StringBuilder();
 			while (inFile1.hasNext()) {
 
