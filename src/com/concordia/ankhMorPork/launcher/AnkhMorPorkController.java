@@ -55,6 +55,13 @@ public class AnkhMorPorkController {
 		
 	}
 	
+	public int generateRandomEventCards()
+	{
+		List<Integer> existingCards = new ArrayList<Integer>();
+		int random = this.boardManager.generateRandom(1, 12, existingCards );
+		existingCards.add(random);
+		return random;
+	}
 	public BoardManager initializeResumeGame(String filename)
 	{	System.out.println("filename : "+filename);
 		
@@ -63,6 +70,7 @@ public class AnkhMorPorkController {
 			filename=filenames[filenames.length-1];System.out.println("filename : "+filename);
 		board = GameStateJsonParser.parseJson(filename,
 				this.boardManager.getBoard());
+		board=boardManager.initializeCityAreaCard(board);
 		boardManager.setBoard(board);
 		}
 		return boardManager;

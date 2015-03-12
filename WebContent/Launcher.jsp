@@ -69,7 +69,7 @@ a:hover.featurenav, a:active.featurenav {
 		<div class="sidebar" style="position: relative; width: 250px; height: 600px; overflow: hidden;">
 			<ul id="uno">
 				<li><a href="#">Home</a></li>
-				<li><a href="#">How To Play</a></li>
+				<li><a href="http://www.treefroggames.com/wp-content/uploads/rules/am-rules-eng.pdf">How To Play</a></li>
 				<li><a href="jsp/NewGame.jsp">New Game</a></li>
 				<li><a href="jsp/ResumeGame.jsp">Resume Game</a></li>
 				<li><a href="#">About Us</a></li>

@@ -5,9 +5,11 @@
  * 2015
  * @email: varunpattiah@gmail.com
  --%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ page import="com.concordia.ankhMorPork.manager.BoardManager" %>
+<%@ page import="com.concordia.ankhMorPork.manager.BoardManager" %>
+<%@ page import="com.concordia.ankhMorPork.common.Global" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -31,7 +33,7 @@
 		BoardManager boardManager=null;
 		Integer noOfPlayer=0;
 		String playerNamelist="";
-		String[] playerlist=null;
+		String[] playerlist=new String[4];
 		if("new".equals(gameStatus))
 		{
 		   noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer"));
@@ -40,6 +42,10 @@
 		   boardManager=ankhMorPorkController.initializeNewGame(noOfPlayer,playerNamelist);
 		}else if("resume".equals(gameStatus)){
 			boardManager=ankhMorPorkController.initializeResumeGame(request.getParameter("fileName"));
+			noOfPlayer=boardManager.getBoard().getNoOfPlayer();
+			for(int j=0;j<noOfPlayer;j++){
+			playerlist[j]=boardManager.getBoard().getPlayerList().get(j).getName();
+			}
 		}
 	%> 
 	<b>Player turn :</b> = <%=boardManager.getBoard().getPlayerTurn() %>
@@ -57,14 +63,11 @@
       
        <% for(int j = 0; j < boardManager.getBoard().getCityAreaCard().size(); j++) { System.out.println("CityAreaCard : "+boardManager.getBoard().getCityAreaCard().get(j).getIdentifier());%>	
        <div id="city_area_card_<%=boardManager.getBoard().getCityAreaCard().get(j).getIdentifier() %>" class="city_area_card fadeandscale_open" alt="City_area_cards/<%=boardManager.getBoard().getCityAreaCard().get(j).getIdentifier() %>.png"></div>
-        <% } %> 
-      <% for(int j = 0; j < boardManager.getBoard().getRandomEventCard().size(); j++) { System.out.println("RandomEventCard : "+boardManager.getBoard().getRandomEventCard().get(j));%>
+        <% } %>
        			
-       <div id="random_event_card_<%=boardManager.getBoard().getRandomEventCard().get(j) %>" ></div>
-       
-        <% } %> 
-     
-     
+       <div id="random_event_card_0" class="random_event_card fadeandscale_open" alt="Random_event_cards/r<%=ankhMorPorkController.generateRandomEventCards()%>.png"></div>
+     	<button id="transaction" onclick="transactionmenu();">Transactions</button>
+     	
             
      </div>
      <div class="clear"></div>
@@ -73,15 +76,14 @@
 	 <% for(int i = 0; i < noOfPlayer; i++) { %>
 	   
        
-        <div class="player">
+        <div id="player<%=i %>" class="player">
         	<div class="title"> <%=playerlist[i] %></div>
-            <div id="minion-1" class="drag minion minion-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
-            <div id="minion-2" class="drag minion minion-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
-            <div id="minion-3" class="drag minion minion-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
-            
-             <div id="building-1" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
-            <div id="building-2" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
-            <div id="building-3" class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>>" draggable="true"></div>   
+        	<% for(int j = 0; j < (Global.MINIONS-boardManager.getBoard().getPlayerList().get(i).getMinionsOnBoard()); j++) { %>
+            <div id="<%=i %>-minion-<%=j %>" class="drag minion minion-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
+            <%} %> 
+            <% for(int j = 0; j < (Global.BUILDINGS-boardManager.getBoard().getPlayerList().get(i).getBuildingOnBoard()); j++) { %>  
+             <div id="<%=i %>building-<%=j %>"  class="drag building building-<%=boardManager.getBoard().getPlayerList().get(i).getColor().toLowerCase()%>" draggable="true"></div>
+             <%} %>
              <button id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>" style="position:relative;top:70px;" class="personality_card fadeandscale_open" alt="personality_cards/<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard()  %>.png">Personality Card</button> 
             <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println("Green Cards : "+boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
        			

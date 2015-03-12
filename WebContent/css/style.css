@@ -55,7 +55,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 #backside_card{background-image:url(../images/backside.jpg);}
 .event_card{width:64px;height:100px;left:150px;position:absolute; float:left;margin:5px; background:#52460a; color:#fff;}
-.random_event_card{width:64px;height:100px;left:230px;position:absolute; float:left;margin-top:5px; background:#52460a; color:#fff;}
+.random_event_card{width:64px;height:100px;left:250px;position:absolute; float:left;margin:5px; background:#52460a; color:#fff;}
 #event_card_g1{background-image:url(../images/green_cards/g1.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
 #event_card_g2{background-image:url(../images/green_cards/g2.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
 #event_card_g3{background-image:url(../images/green_cards/g3.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
@@ -108,37 +108,38 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 #event_card_g50{background-image:url(../images/green_cards/g50.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
 #event_card_g51{background-image:url(../images/green_cards/g51.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
 #event_card_g52{background-image:url(../images/green_cards/g52.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
-#event_card_g53{background-image:url(../images/green_cards/g53.png);background-size:contain;position:relative;left:45px;margin-left: auto;	}
+#event_card_g53{background-image:url(../images/green_cards/g53.png);background-size:contain;position:relative;left:45px;margin-left: auto;}
 
 #event_card_b1{background-image:url(../images/events_cards/b1.jpg);}
 
-.city_area_card{width:64px;height:100px;left:230px;position:absolute;margin:5px;float:left;}
-#city_area_card_1{background-image:url(../images/City_area_cards/1.png);background-size:contain;};
-#city_area_card_2{background-image:url(../images/City_area_cards/2.png);background-size:contain;};
-#city_area_card_3{background-image:url(../images/City_area_cards/3.png);background-size:contain;};
-#city_area_card_4{background-image:url(../images/City_area_cards/4.png);background-size:contain;};
-#city_area_card_5{background-image:url(../images/City_area_cards/5.png);background-size:contain;};
-#city_area_card_6{background-image:url(../images/City_area_cards/6.png);background-size:contain;};
-#city_area_card_7{background-image:url(../images/City_area_cards/7.png);background-size:contain;};
-#city_area_card_8{background-image:url(../images/City_area_cards/8.png);background-size:contain;};
-#city_area_card_9{background-image:url(../images/City_area_cards/9.png);background-size:contain;};
-#city_area_card_10{background-image:url(../images/City_area_cards/10.png);background-size:contain;};
-#city_area_card_11{background-image:url(../images/City_area_cards/11.png);background-size:contain;};
-#city_area_card_12{background-image:url(../images/City_area_cards/12.png);background-size:contain;};
+.city_area_card{width:64px;height:100px;left:160px;position:absolute;margin:5px;float:left;}
+#city_area_card_1{background-image:url(../images/City_area_cards/1.png);background-size:contain;}
+#city_area_card_2{background-image:url(../images/City_area_cards/2.png);background-size:contain;}
+#city_area_card_3{background-image:url(../images/City_area_cards/3.png);background-size:contain;}
+#city_area_card_4{background-image:url(../images/City_area_cards/4.png);background-size:contain;}
+#city_area_card_5{background-image:url(../images/City_area_cards/5.png);background-size:contain;}
+#city_area_card_6{background-image:url(../images/City_area_cards/6.png);background-size:contain;}
+#city_area_card_7{background-image:url(../images/City_area_cards/7.png);background-size:contain;}
+#city_area_card_8{background-image:url(../images/City_area_cards/8.png);background-size:contain;}
+#city_area_card_9{background-image:url(../images/City_area_cards/9.png);background-size:contain;}
+#city_area_card_10{background-image:url(../images/City_area_cards/10.png);background-size:contain;}
+#city_area_card_11{background-image:url(../images/City_area_cards/11.png);background-size:contain;}
+#city_area_card_12{background-image:url(../images/City_area_cards/12.png);background-size:contain;}
 
-.random_event_card{width:64px;height:100px;left:230px;position:absolute; float:left;}
-#random_event_card_1{background-image:url(../images/Random_event_cards/r1.png);background-size:contain;};
-#random_event_card_2{background-image:url(../images/Random_event_cards/r2.png);background-size:contain;};
-#random_event_card_3{background-image:url(../images/Random_event_cards/r3.png);background-size:contain;};
-#random_event_card_4{background-image:url(../images/Random_event_cards/r4.png);background-size:contain;};
-#random_event_card_5{background-image:url(../images/Random_event_cards/r5.png);background-size:contain;};
-#random_event_card_6{background-image:url(../images/Random_event_cards/r6.png);background-size:contain;};
-#random_event_card_7{background-image:url(../images/Random_event_cards/r7.png);background-size:contain;};
-#random_event_card_8{background-image:url(../images/Random_event_cards/r8.png);background-size:contain;};
-#random_event_card_9{background-image:url(../images/Random_event_cards/r9.png);background-size:contain;};
-#random_event_card_10{background-image:url(../images/Random_event_cards/r10.png);background-size:contain;};
-#random_event_card_11{background-image:url(../images/Random_event_cards/r11.png);background-size:contain;};
-#random_event_card_12{background-image:url(../images/Random_event_cards/r12.png);background-size:contain;};
+
+#random_event_card_0{background-image:url(../images/Random_event_cards/r0.png);background-size:contain;}
+#random_event_card_1{background-image:url(../images/Random_event_cards/r1.png);background-size:contain;}
+#random_event_card_2{background-image:url(../images/Random_event_cards/r2.png);background-size:contain;}
+#random_event_card_3{background-image:url(../images/Random_event_cards/r3.png);background-size:contain;}
+#random_event_card_4{background-image:url(../images/Random_event_cards/r4.png);background-size:contain;}
+#random_event_card_5{background-image:url(../images/Random_event_cards/r5.png);background-size:contain;}
+#random_event_card_6{background-image:url(../images/Random_event_cards/r6.png);background-size:contain;}
+#random_event_card_7{background-image:url(../images/Random_event_cards/r7.png);background-size:contain;}
+#random_event_card_8{background-image:url(../images/Random_event_cards/r8.png);background-size:contain;}
+#random_event_card_9{background-image:url(../images/Random_event_cards/r9.png);background-size:contain;}
+#random_event_card_10{background-image:url(../images/Random_event_cards/r10.png);background-size:contain;}
+#random_event_card_11{background-image:url(../images/Random_event_cards/r11.png);background-size:contain;}
+#random_event_card_12{background-image:url(../images/Random_event_cards/r12.png);background-size:contain;}
 
 
 .player .personality_card{left:140px;position:absolute; float:left;}
@@ -177,6 +178,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 .player, .common{width: 500px;min-height:150px;border: 2px solid black;}
 .save_game{width:100px;height:30px;background:#52460a; color:#fff;}
+.transaction{width:100px;height:30px;background:#52460a; color:#fff;}
 .board_area{ position:absolute; border:0px solid #F8F8F8;}
 #area_1{height: 93px; width:200px; top: 110px;left: 390px;}
 #area_2{height: 91px; width: 150px; top: 232px; left: 328px;}

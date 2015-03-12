@@ -45,4 +45,8 @@ function resend()
 		var jspcall = "../Launcher.jsp?gameStatus=new";
 	    window.location.href = jspcall;
 	} 
+}
+
+function transactionmenu()
+{
 	}

@@ -64,6 +64,7 @@ public class BoardManager {
 	public BoardManager() {
 		this.board = new Board();
 		this.board = this.initializeCityAreaCard(board);
+		this.board.setRandomEventCard(randomEventCards);
 
 	}
 
@@ -360,7 +361,7 @@ public class BoardManager {
 	 *         to players.
 	 */
 	@SuppressWarnings("resource")
-	private Board initializeCityAreaCard(Board board2) {
+	public Board initializeCityAreaCard(Board board2) {
 		System.out.println("initializeCityAreaCardinitializeCityAreaCard");
 		String[] dataArray = null;
 		Scanner inFile1;

@@ -16,8 +16,8 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 /**
- * @author elDiablo Jan 29, 2015 12:02:00 PM 2015
- * @email: sumitsarkarbd@gmail.com
+ * @author elDiablo,varun Jan 29, 2015 12:02:00 PM 2015
+ * @email: sumitsarkarbd@gmail.com,varunpattiah@gmail.com
  */
 
 /*
@@ -81,7 +81,7 @@ public class GameStateJsonGenerator {
 				}
 				
 				
-				//Write array for city area cards
+				//Write array for green cards cards
 				
 				jGenerator.writeStringField(Language.GREEN_CARDS, board.getPlayerList().get(i).getGreenPlayerCards().toString());
 				jGenerator.writeStringField(Language.BROWN_CARDS, board.getPlayerList().get(i).getBrownPlayerCards().toString());
