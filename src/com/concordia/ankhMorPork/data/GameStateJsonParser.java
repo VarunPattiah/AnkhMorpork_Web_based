@@ -60,6 +60,7 @@ public class GameStateJsonParser {
 	 * @return it's returning the Board object loaded with a saved game.
 	 */
 	
+	@SuppressWarnings("resource")
 	public static Board parseJson(String fileName, Board board) {
 		List<Player> playerList = new ArrayList<Player>();
 		try {

@@ -37,3 +37,12 @@ function newgame()
 	var jspcall = "../jsp/Play.jsp?noOfPlayer="+noOfPlayer+"&Playername="+playername+"&gameStatus=new";
     window.location.href = jspcall;
 }
+
+function resend()
+{
+	var r = confirm("Are you sure ypu want to save!");
+	if (r == true) {
+		var jspcall = "../Launcher.jsp?gameStatus=new";
+	    window.location.href = jspcall;
+	} 
+	}

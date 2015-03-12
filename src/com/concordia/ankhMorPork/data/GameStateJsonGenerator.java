@@ -42,7 +42,7 @@ public class GameStateJsonGenerator {
 			/*** write to file ***/
 			JsonGenerator jGenerator = jfactory
 					.createJsonGenerator(new File(
-							Global.SAVED_FILE_DIRECTORY_PATH + "/"
+							Global.FILE_PATH+"/"+Global.SAVED_FILE_DIRECTORY_PATH + "/"
 									+ Global.saveFileName + ".json"),
 							JsonEncoding.UTF8);
 

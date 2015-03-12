@@ -95,7 +95,7 @@
         
         
         <div id="fullboard"> 
-        <button class="save_game">Save Game</button>
+        <button class="save_game" onclick="resend();"<%ankhMorPorkController.saveGame(boardManager.getBoard());%>>Save Game</button>
         <% for(int i=0;i<12;i++) {%>     
                 <div id="area_<%=(i+1)%>" class="board_area"><%=ankhMorPorkController.getAreaDetails(i) %></div>			
              

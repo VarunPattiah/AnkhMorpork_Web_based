@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.concordia.ankhMorPork.common.Global;
+import com.concordia.ankhMorPork.data.GameStateJsonGenerator;
 import com.concordia.ankhMorPork.data.GameStateJsonParser;
 import com.concordia.ankhMorPork.manager.Board;
 import com.concordia.ankhMorPork.manager.BoardManager;
@@ -62,6 +63,14 @@ public class AnkhMorPorkController {
 		}
 		return boardManager;
 	}
+	
+	public String saveGame(Board board)
+	{
+		GameStateJsonGenerator gameStateJsonGenerator = new GameStateJsonGenerator();
+		Global.saveFileName="saveFileName_"+System.currentTimeMillis();
+		gameStateJsonGenerator.saveGameCurrentStateToJsonFormate(board);
+		return "success";
+	}
 	public String getAreaDetails(int areaNumber)
 	{
 		String html="";
@@ -94,7 +103,7 @@ public class AnkhMorPorkController {
 	public static void main(String args[])
 	{
 		AnkhMorPorkController a=new AnkhMorPorkController();
-		a.initializeNewGame(2,"Player1,Player2");
+		//a.initializeNewGame(2,"Player1,Player2");
 		
 	}
 	
