@@ -71,7 +71,7 @@ a:hover.featurenav, a:active.featurenav {
 				<li><a href="#">Home</a></li>
 				<li><a href="#">How To Play</a></li>
 				<li><a href="jsp/NewGame.jsp">New Game</a></li>
-				<li><a href="#">Resume Game</a></li>
+				<li><a href="jsp/ResumeGame.jsp">Resume Game</a></li>
 				<li><a href="#">About Us</a></li>
 				<li><a href="#">FAQ</a></li>
 			</ul>

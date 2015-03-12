@@ -27,11 +27,18 @@
     <jsp:useBean id="ankhMorPorkController" class="com.concordia.ankhMorPork.launcher.AnkhMorPorkController" /> 
      <div id="board">
      
-	<% Integer noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer"));
-	   String playerNamelist=request.getParameter("Playername");	
-	   String[] playerlist=playerNamelist.split(",");
-	   BoardManager boardManager=ankhMorPorkController.initializeNewGame(noOfPlayer,playerNamelist);
-
+	<% 
+		String gameStatus=request.getParameter("gameStatus");
+		BoardManager boardManager=null;
+		if("new".equals(gameStatus))
+		{
+		   Integer noOfPlayer=Integer.parseInt(request.getParameter("noOfPlayer"));
+		   String playerNamelist=request.getParameter("Playername");	
+		   String[] playerlist=playerNamelist.split(",");
+		   boardManager=ankhMorPorkController.initializeNewGame(noOfPlayer,playerNamelist);
+		}else if("resume".equals(gameStatus)){
+			boardManager=ankhMorPorkController.initializeResumeGame(request.getParameter("fileName"));
+		}
 	%> 
 	<b>Player turn :</b> = <%=boardManager.getBoard().getPlayerTurn() %>
     
