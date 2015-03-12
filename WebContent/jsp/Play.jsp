@@ -87,11 +87,16 @@
              <button id="personality_card_<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard() %>" style="position:relative;top:70px;" class="personality_card fadeandscale_open" alt="personality_cards/<%=boardManager.getBoard().getPlayerList().get(i).getPersonalityCard()  %>.png">Personality Card</button> 
             <% for(int j = 0; j < boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().size(); j++) { System.out.println("Green Cards : "+boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j));%>
        			
-      	 <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>"  class="event_card fadeandscale_open" alt="green_cards/g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j)%>.png"></div>
+      	 <div id="event_card_g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j) %>"  class="drag event_card fadeandscale_open" alt="green_cards/g<%=boardManager.getBoard().getPlayerList().get(i).getGreenPlayerCards().get(j)%>.png"></div>
        
         <% } %>
         </div>
         <% } %>
+        
+        
+	 <div class="common used">
+    	 <div class="title"> Used Cards</div>     
+     </div>
         </div>
       
         
@@ -128,6 +133,23 @@
 			// without this, FF will try and go to a URL with your id's name
             event.preventDefault();
 			});
+			
+  			 // bind the dragover event on the board sections
+            $('.event_card, .used').bind('dragover', function(event) {
+                event.preventDefault();
+            });
+			
+			// bind the drop event on the board sections
+  			$('.event_card, .used').bind('drop', function(event) {
+            var notecard = event.originalEvent.dataTransfer.getData("text/plain");
+			event.target.appendChild(document.getElementById(notecard));
+			//alert(notecard);
+            //alert($(this).attr("id"));
+			
+			
+            event.preventDefault();
+			});
+
         }
 		</script>
 

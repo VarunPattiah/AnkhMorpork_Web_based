@@ -142,7 +142,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 #random_event_card_12{background-image:url(../images/Random_event_cards/r12.png);background-size:contain;}
 
 
-.player .personality_card{left:140px;position:absolute; float:left;}
+.player .personality_card{left:10px;position:absolute; float:left;}
 .player .event_card{left:230px;position:absolute;}
 .player .city_area_card{left:230px;position:absolute;}
 .player .minion{ left:20px; position:absolute; float:left;}
