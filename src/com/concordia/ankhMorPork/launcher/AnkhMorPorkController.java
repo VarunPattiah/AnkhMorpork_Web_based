@@ -52,6 +52,11 @@ public class AnkhMorPorkController {
 		return boardManager;
 		
 	}
+	
+	public BoardManager initializeResumeGame(String filename)
+	{
+		return boardManager;
+	}
 	public String getAreaDetails(int areaNumber)
 	{
 		String html="";
@@ -63,16 +68,20 @@ public class AnkhMorPorkController {
 				i--;
 		}
 		if(this.boardManager.getBoard().getArea().get(areaNumber).getTroubleMaker()){
-			html+="";
+			html+="<div id=\"trouble-1\" class=\"drag trouble\" draggable=\"true\"></div>";
 		}
 		if(this.boardManager.getBoard().getArea().get(areaNumber).getBuilding()){
 			html+="";
 		}
-		if(this.boardManager.getBoard().getArea().get(areaNumber).getNoOfDemon()!=0){
-			html+="";
+		i=this.boardManager.getBoard().getArea().get(areaNumber).getNoOfDemon();
+		while(i>0){
+			html+="<div id=\"demon-"+i+"\" class=\"drag demon\" draggable=\"true\"></div>";
+			i--;
 		}
-		if(this.boardManager.getBoard().getArea().get(areaNumber).getNoOfTroll()!=0){
-			html+="";
+		i=this.boardManager.getBoard().getArea().get(areaNumber).getNoOfTroll();
+		while(i>0){
+			html+="<div id=\"troll-"+i+"\" class=\"drag troll\" draggable=\"true\"></div>";
+			i--;
 		}
 		System.out.println("html : "+html);
 		return html;

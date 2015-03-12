@@ -167,7 +167,7 @@ ul li:hover ul {display: block; opacity: 1; visibility: visible;}
 
 
 
-#board{width: 100%;min-height:100px;position:relative;float:left;}
+#board{width: 100%;min-height:100px;position:relative;float:left;background-color:#4C4C33;}
 #players{width: 40%;float:left;}
 .player, .common{ width:100%;}
 

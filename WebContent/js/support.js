@@ -20,7 +20,13 @@ function validate()
 		  
 		
 	}
+function validateResumeGame()
+{
+	var fileName=$("input").val();
 
+	var jspcall = "../jsp/Play.jsp?fileName="+fileName+"&gameStatus=resume";
+	window.location.href = jspcall;
+	}
 function newgame()
 {
 	for (var i=1; i<=noOfPlayer;i++) {
@@ -28,6 +34,6 @@ function newgame()
 		playername=playername+$(ident).val()+",";
 		
 	}
-	var jspcall = "../jsp/Play.jsp?noOfPlayer="+noOfPlayer+"&Playername="+playername;
+	var jspcall = "../jsp/Play.jsp?noOfPlayer="+noOfPlayer+"&Playername="+playername+"&gameStatus=new";
     window.location.href = jspcall;
 }
