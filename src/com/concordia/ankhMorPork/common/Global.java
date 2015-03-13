@@ -44,7 +44,7 @@ public class  Global {
 		}
 		String tempPath[]= fullPath.split("/.metadata/.plugins/");
 		String pathArr= (String) tempPath[0].substring(1);
-		FILE_PATH=pathArr+"/WebPage";
+		FILE_PATH=pathArr+"/AnkhMorpork_Web_based";
 		System.out.println("FILE_PATH"+FILE_PATH);
 	}
 	
